@@ -28,7 +28,6 @@ import crmImage from "@/assets/crm-automation.jpg";
 const Index = () => {
   const services = [
     {
-      icon: <BarChart3 className="h-8 w-8 text-accent" />,
       title: "Analytics Setup & Audits",
       items: [
         {
@@ -54,7 +53,6 @@ const Index = () => {
       ]
     },
     {
-      icon: <Settings className="h-8 w-8 text-accent" />,
       title: "Tag Management",
       items: [
         {
@@ -80,7 +78,6 @@ const Index = () => {
       ]
     },
     {
-      icon: <TrendingUp className="h-8 w-8 text-accent" />,
       title: "Reporting & Dashboarding",
       items: [
         {
@@ -106,7 +103,6 @@ const Index = () => {
       ]
     },
     {
-      icon: <Target className="h-8 w-8 text-accent" />,
       title: "Attribution & ROI Analytics",
       items: [
         {
@@ -132,7 +128,6 @@ const Index = () => {
       ]
     },
     {
-      icon: <Lock className="h-8 w-8 text-accent" />,
       title: "Privacy & Compliance",
       items: [
         {
@@ -158,7 +153,6 @@ const Index = () => {
       ]
     },
     {
-      icon: <Database className="h-8 w-8 text-accent" />,
       title: "Data Quality & Validation",
       items: [
         {
@@ -184,7 +178,6 @@ const Index = () => {
       ]
     },
     {
-      icon: <Brain className="h-8 w-8 text-accent" />,
       title: "Predictive Analytics & Forecasting",
       items: [
         {
@@ -210,7 +203,6 @@ const Index = () => {
       ]
     },
     {
-      icon: <Workflow className="h-8 w-8 text-accent" />,
       title: "CRM & Marketing Automation",
       items: [
         {
@@ -236,7 +228,6 @@ const Index = () => {
       ]
     },
     {
-      icon: <GraduationCap className="h-8 w-8 text-accent" />,
       title: "Training & Workshops",
       items: [
         {
