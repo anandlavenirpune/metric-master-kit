@@ -295,51 +295,45 @@ const Index = () => {
   const industries = [
     {
       title: "E-commerce & Retail",
-      description: "Advanced purchase & refund tracking"
+      description: "Advanced purchase tracking, refund analytics, and customer journey optimization",
+      image: teamImage
     },
     {
       title: "B2B & SaaS", 
-      description: "Lead tracking + CRM integration"
+      description: "Lead tracking, CRM integration, and pipeline analytics for subscription businesses",
+      image: analyticsImage
     },
     {
       title: "Agencies",
-      description: "White-label analytics & reporting services"
-    },
-    {
-      title: "Finance & Professional Services",
-      description: "Privacy-compliant analytics"
-    },
-    {
-      title: "Education & Non-profits",
-      description: "Full-funnel marketing & lead tracking"
+      description: "White-label analytics services and scalable reporting solutions for client management",
+      image: visualizationImage
     }
   ];
 
   const benefits = [
     {
-      icon: <Globe className="h-6 w-6 text-accent" />,
-      title: "Global focus",
-      description: "Serving clients in Canada, Australia, UAE, UK & US"
+      icon: <Globe className="h-6 w-6 text-blue-500" />,
+      title: "Global Focus",
+      description: "Serving clients across Canada, Australia, UAE, UK & US with localized expertise and 24/7 support",
+      image: teamImage
     },
     {
-      icon: <Settings className="h-6 w-6 text-accent" />,
-      title: "Full-stack expertise",
-      description: "GA4, GTM, Looker Studio, BigQuery, Ads, CRM, CMPs"
+      icon: <Settings className="h-6 w-6 text-gray-500" />,
+      title: "Full-Stack Expertise",
+      description: "Complete mastery of GA4, GTM, Looker Studio, BigQuery, Ads, CRM and CMPs for end-to-end solutions",
+      image: analyticsImage
     },
     {
-      icon: <Shield className="h-6 w-6 text-accent" />,
-      title: "Compliance-ready",
-      description: "GDPR, PIPEDA, APP, PDPL"
+      icon: <Shield className="h-6 w-6 text-orange-500" />,
+      title: "Compliance-Ready",
+      description: "GDPR, PIPEDA, APP, PDPL compliant tracking with privacy-first approaches and consent management",
+      image: visualizationImage
     },
     {
-      icon: <Zap className="h-6 w-6 text-accent" />,
-      title: "Automation-first",
-      description: "Real-time dashboards & workflows"
-    },
-    {
-      icon: <CheckCircle2 className="h-6 w-6 text-accent" />,
-      title: "Data you can trust",
-      description: "Validation, cleaning, predictive analytics"
+      icon: <Zap className="h-6 w-6 text-green-500" />,
+      title: "Automation-First",
+      description: "Real-time dashboards and automated workflows that save time and deliver insights 24/7",
+      image: advertisingImage
     }
   ];
 
@@ -458,17 +452,25 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Industries We Serve</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Tailored analytics solutions for diverse business sectors
+              Tailored analytics solutions for every business vertical
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
-              <Card key={index} className="service-card text-center">
-                <Users className="h-12 w-12 text-accent mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-3">{industry.title}</h3>
-                <p className="text-muted-foreground">{industry.description}</p>
-              </Card>
+              <div key={index} className="bg-card rounded-lg overflow-hidden shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-shadow duration-300">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={industry.image} 
+                    alt={`${industry.title} industry`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-3 text-white">{industry.title}</h3>
+                  <p className="text-white/80">{industry.description}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -478,20 +480,27 @@ const Index = () => {
       <section className="py-20 lg:py-32 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Why Choose Us?</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Why Choose Us</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              The expertise and reliability you need to transform your marketing data
+              Global expertise with local precision
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-4">
-                <div className="flex-shrink-0 p-3 bg-accent/10 rounded-lg">
-                  {benefit.icon}
+              <div key={index} className="bg-card rounded-lg overflow-hidden shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-shadow duration-300">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={benefit.image} 
+                    alt={`${benefit.title} illustration`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
+                <div className="p-6">
+                  <div className="flex items-center mb-3">
+                    {benefit.icon}
+                    <h3 className="text-xl font-semibold ml-3">{benefit.title}</h3>
+                  </div>
                   <p className="text-muted-foreground">{benefit.description}</p>
                 </div>
               </div>
