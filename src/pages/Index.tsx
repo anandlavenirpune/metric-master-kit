@@ -458,17 +458,16 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
-              <div key={index} className="bg-card rounded-lg overflow-hidden shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-shadow duration-300">
-                <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={industry.image} 
-                    alt={`${industry.title} industry`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3 text-white">{industry.title}</h3>
-                  <p className="text-white/80">{industry.description}</p>
+              <div key={index} className="relative rounded-lg overflow-hidden shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-shadow duration-300 aspect-[4/3]">
+                <img 
+                  src={industry.image} 
+                  alt={`${industry.title} industry`}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/60"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                  <h3 className="text-xl font-semibold mb-3">{industry.title}</h3>
+                  <p className="text-white/90 text-sm leading-relaxed">{industry.description}</p>
                 </div>
               </div>
             ))}
