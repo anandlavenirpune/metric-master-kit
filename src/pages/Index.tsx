@@ -389,12 +389,9 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="flex items-start space-x-4 p-6">
-                <div className="flex-shrink-0 w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center">
-                  {service.icon}
-                </div>
+              <div key={index} className="p-6">
                 <div>
                   <h3 className="text-xl font-semibold mb-4 text-foreground">{service.title}</h3>
                   <ul className="space-y-4">
