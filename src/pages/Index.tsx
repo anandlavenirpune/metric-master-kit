@@ -252,10 +252,37 @@ const Index = () => {
                   {service.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-3 text-foreground">{service.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {service.items.join(', ')}
-                  </p>
+                  <h3 className="text-xl font-semibold mb-4 text-foreground">{service.title}</h3>
+                  <ul className="space-y-3">
+                    {service.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start space-x-3">
+                        <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
+                          index === 0 ? 'bg-blue-100' : 
+                          index === 1 ? 'bg-purple-100' : 
+                          index === 2 ? 'bg-green-100' : 
+                          index === 3 ? 'bg-orange-100' : 
+                          index === 4 ? 'bg-red-100' : 
+                          index === 5 ? 'bg-teal-100' : 
+                          index === 6 ? 'bg-indigo-100' : 
+                          index === 7 ? 'bg-pink-100' : 
+                          'bg-yellow-100'
+                        }`}>
+                          <div className={`w-2 h-2 rounded-full ${
+                            index === 0 ? 'bg-blue-500' : 
+                            index === 1 ? 'bg-purple-500' : 
+                            index === 2 ? 'bg-green-500' : 
+                            index === 3 ? 'bg-orange-500' : 
+                            index === 4 ? 'bg-red-500' : 
+                            index === 5 ? 'bg-teal-500' : 
+                            index === 6 ? 'bg-indigo-500' : 
+                            index === 7 ? 'bg-pink-500' : 
+                            'bg-yellow-500'
+                          }`}></div>
+                        </div>
+                        <span className="text-muted-foreground leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
