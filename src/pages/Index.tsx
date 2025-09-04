@@ -365,7 +365,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 lg:py-32">
+      <section className="py-20 lg:py-32 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">What We Do</h2>
@@ -376,28 +376,28 @@ const Index = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="p-6">
+              <div key={index} className="bg-white rounded-lg border border-gray-200 p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
                 <div>
-                  <h3 className="text-xl font-semibold mb-4 text-foreground">{service.title}</h3>
+                  <h3 className="text-xl font-semibold mb-6 text-gray-900">{service.title}</h3>
                   <ul className="space-y-4">
                     {service.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start space-x-3">
-                        <div className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1" style={{
-                          backgroundColor: index === 0 ? '#dbeafe' : 
-                                         index === 1 ? '#e9d5ff' : 
-                                         index === 2 ? '#dcfce7' : 
+                        <div className="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center mt-0.5" style={{
+                          backgroundColor: index === 0 ? '#e0e7ff' : 
+                                         index === 1 ? '#f3e8ff' : 
+                                         index === 2 ? '#ecfdf5' : 
                                          index === 3 ? '#fed7aa' : 
                                          index === 4 ? '#fecaca' : 
-                                         index === 5 ? '#a7f3d0' : 
-                                         index === 6 ? '#c7d2fe' : 
-                                         index === 7 ? '#fbcfe8' : 
+                                         index === 5 ? '#ccfbf1' : 
+                                         index === 6 ? '#e0e7ff' : 
+                                         index === 7 ? '#fdf2f8' : 
                                          '#fef3c7'
                         }}>
                           {item.icon}
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
-                          <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                          <h4 className="font-medium text-gray-900 mb-1">{item.title}</h4>
+                          <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
                         </div>
                       </li>
                     ))}
