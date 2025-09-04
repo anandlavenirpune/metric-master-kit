@@ -8,51 +8,57 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Brand Colors - B2B Marketing Agency Theme */
+    --primary: 218 64% 33%;        /* Deep Navy Blue #1F3B8C */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 218 64% 45%;
+    --primary-dark: 218 64% 25%;
+
+    --accent: 47 94% 52%;          /* Warm Yellow #F9C80E */
+    --accent-foreground: 0 0% 18%;
+    --accent-light: 47 94% 65%;
+    --accent-dark: 47 94% 40%;
+
+    --background: 0 0% 96%;        /* Soft Grey #F5F5F5 */
+    --foreground: 0 0% 18%;        /* Charcoal #2E2E2E */
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 18%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --secondary: 0 0% 100%;
+    --secondary-foreground: 218 64% 33%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 0 0% 93%;
+    --muted-foreground: 0 0% 40%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 218 64% 33%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --radius: 0.75rem;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Agency-specific design tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-light)));
+    --shadow-soft: 0 4px 20px -2px hsl(var(--primary) / 0.1);
+    --shadow-card: 0 8px 30px -8px hsl(var(--primary) / 0.15);
+    --shadow-button: 0 4px 15px -3px hsl(var(--accent) / 0.3);
 
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar colors */
+    --sidebar-background: 218 64% 33%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 47 94% 52%;
+    --sidebar-primary-foreground: 0 0% 18%;
+    --sidebar-accent: 218 64% 40%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 218 64% 25%;
+    --sidebar-ring: 47 94% 52%;
   }
 
   .dark {
@@ -100,6 +106,28 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+}
+
+@layer components {
+  /* Hero CTA Button */
+  .btn-hero {
+    @apply bg-gradient-to-r from-accent to-accent-light text-accent-foreground font-semibold px-8 py-4 rounded-xl shadow-[var(--shadow-button)] hover:shadow-lg hover:scale-105 transition-all duration-300;
+  }
+
+  /* Service Card */
+  .service-card {
+    @apply bg-card p-8 rounded-xl shadow-[var(--shadow-card)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-border;
+  }
+
+  /* Tool Badge */
+  .tool-badge {
+    @apply bg-muted text-muted-foreground px-4 py-2 rounded-lg text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors duration-200;
+  }
+
+  /* Section with gradient background */
+  .section-hero {
+    @apply bg-gradient-to-br from-primary to-primary-dark text-primary-foreground;
   }
 }
