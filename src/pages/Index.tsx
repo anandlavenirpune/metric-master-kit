@@ -20,6 +20,10 @@ import {
 } from "lucide-react";
 import heroImage from "@/assets/hero-analytics.jpg";
 import teamImage from "@/assets/team-analytics.jpg";
+import analyticsImage from "@/assets/analytics-tracking.jpg";
+import visualizationImage from "@/assets/visualization-reporting.jpg";
+import advertisingImage from "@/assets/advertising-platforms.jpg";
+import crmImage from "@/assets/crm-automation.jpg";
 
 const Index = () => {
   const services = [
@@ -118,30 +122,37 @@ const Index = () => {
   const toolCategories = [
     {
       category: "Analytics & Tracking",
+      image: analyticsImage,
       tools: ["Google Analytics 4 (GA4)", "Google Tag Manager (GTM)", "Server-Side GTM (sGTM)", "Google Tag (gtag.js)"]
     },
     {
       category: "Visualization & Reporting", 
-      tools: ["Looker Studio", "BigQuery", "Power BI", "Tableau", "Google Sheets (Supermetrics, Databox, Funnel.io connectors)"]
+      image: visualizationImage,
+      tools: ["Looker Studio", "BigQuery", "Power BI", "Tableau", "Google Sheets connectors"]
     },
     {
       category: "Advertising & Marketing Platforms",
+      image: advertisingImage,
       tools: ["Google Ads", "Meta Ads (Facebook/Instagram)", "TikTok Ads", "LinkedIn Ads", "Microsoft Ads"]
     },
     {
-      category: "Consent & Privacy",
-      tools: ["Google Consent Mode v2", "Cookiebot, OneTrust, Didomi, Quantcast"]
-    },
-    {
       category: "CRM & Automation",
+      image: crmImage,
       tools: ["HubSpot", "Salesforce", "Zapier / Make / n8n", "Segment / Rudderstack", "Slack integrations"]
     },
     {
+      category: "Consent & Privacy",
+      image: analyticsImage,
+      tools: ["Google Consent Mode v2", "Cookiebot, OneTrust, Didomi, Quantcast"]
+    },
+    {
       category: "Ecommerce Platforms",
+      image: visualizationImage,
       tools: ["Shopify", "WooCommerce", "Magento", "BigCommerce"]
     },
     {
       category: "Cloud & Infrastructure",
+      image: advertisingImage,
       tools: ["Google Cloud Platform (GCP)", "AWS", "Cloudflare Zaraz"]
     }
   ];
@@ -407,16 +418,26 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="space-y-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {toolCategories.map((category, index) => (
-              <div key={index}>
-                <h3 className="text-2xl font-semibold mb-6 text-primary">{category.category}</h3>
-                <div className="flex flex-wrap gap-3">
-                  {category.tools.map((tool, toolIndex) => (
-                    <Badge key={toolIndex} className="tool-badge">
-                      {tool}
-                    </Badge>
-                  ))}
+              <div key={index} className="bg-card rounded-lg overflow-hidden shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-shadow duration-300">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={category.image} 
+                    alt={`${category.category} tools interface`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-4 text-primary">{category.category}</h3>
+                  <ul className="space-y-3">
+                    {category.tools.map((tool, toolIndex) => (
+                      <li key={toolIndex} className="flex items-start">
+                        <CheckCircle2 className="h-5 w-5 text-accent mt-0.5 mr-3 flex-shrink-0" />
+                        <span className="text-muted-foreground">{tool}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
