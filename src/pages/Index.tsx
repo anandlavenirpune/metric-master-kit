@@ -245,165 +245,20 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Services */}
-            <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Analytics Setup & Audits */}
-              <Card className="service-card">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Analytics Setup & Audits</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Google Analytics 4 (GA4) migration & audits</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Event & conversion tracking setup</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Ecommerce tracking (Shopify, WooCommerce, Magento)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Cross-domain & multi-site tracking</span>
-                  </li>
-                </ul>
-              </Card>
-
-              {/* Tag Management */}
-              <Card className="service-card">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Tag Management</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-purple-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Google Tag Manager (GTM) setup & debugging</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-purple-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Server-Side GTM (sGTM) implementation on GCP/AWS</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-purple-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Meta Conversions API & Google Ads Enhanced Conversions</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-purple-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Cookie lifespan & cookieless tracking solutions</span>
-                  </li>
-                </ul>
-              </Card>
-
-              {/* Reporting & Dashboarding */}
-              <Card className="service-card">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Reporting & Dashboarding</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-green-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Looker Studio dashboards (quota-proof, automated)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-green-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Power BI & Tableau reporting</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-green-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">BigQuery pipelines & advanced SQL models</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-green-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Automated email/slack/pdf reports</span>
-                  </li>
-                </ul>
-              </Card>
-
-              {/* Attribution & ROI Analytics */}
-              <Card className="service-card">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Attribution & ROI Analytics</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-orange-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Multi-touch attribution modeling</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-orange-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Cost vs revenue tracking</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-orange-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Customer Lifetime Value (LTV) dashboards</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-orange-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Offline conversions integration</span>
-                  </li>
-                </ul>
-              </Card>
-
-              {/* Privacy & Compliance */}
-              <Card className="service-card">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Privacy & Compliance</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-red-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Consent Mode v2 setup</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-red-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">CMP integrations (Cookiebot, OneTrust, Didomi, Quantcast)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-red-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">GDPR, PIPEDA, APP, PDPL-compliant data tracking</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-red-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">IP anonymization & privacy-first setups</span>
-                  </li>
-                </ul>
-              </Card>
-
-              {/* Data Quality & Validation */}
-              <Card className="service-card">
-                <h3 className="text-xl font-semibold mb-4 text-primary">Data Quality & Validation</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-teal-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Identify and fix data mismatches (GA4 vs Ads vs CRM)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-teal-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Deduplicate and clean ecommerce & lead data</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-teal-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Bot traffic filtering</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full bg-teal-500 mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-muted-foreground">Channel grouping setup</span>
-                  </li>
-                </ul>
-              </Card>
-            </div>
-
-            {/* Right Column - Dashboard Images */}
-            <div className="space-y-6">
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <img 
-                  src={heroImage} 
-                  alt="Analytics dashboard interface showing data visualization" 
-                  className="w-full h-64 object-cover"
-                />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="flex items-start space-x-4 p-6">
+                <div className="flex-shrink-0 w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center">
+                  {service.icon}
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-3 text-foreground">{service.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {service.items.join(', ')}
+                  </p>
+                </div>
               </div>
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <img 
-                  src={teamImage} 
-                  alt="Marketing analytics workspace with multiple screens" 
-                  className="w-full h-64 object-cover"
-                />
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
