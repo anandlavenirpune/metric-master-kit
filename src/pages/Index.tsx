@@ -31,90 +31,234 @@ const Index = () => {
       icon: <BarChart3 className="h-8 w-8 text-accent" />,
       title: "Analytics Setup & Audits",
       items: [
-        "Google Analytics 4 (GA4) migration & audits",
-        "Event & conversion tracking setup", 
-        "Ecommerce tracking (Shopify, WooCommerce, Magento)",
-        "Cross-domain & multi-site tracking"
+        {
+          icon: <TrendingUp className="h-5 w-5 text-blue-500" />,
+          title: "Google Analytics 4 (GA4) migration & audits",
+          description: "Complete migration from Universal Analytics to GA4 with data validation and custom event setup"
+        },
+        {
+          icon: <Target className="h-5 w-5 text-blue-500" />,
+          title: "Event & conversion tracking setup",
+          description: "Configure custom events, goals, and conversion tracking for accurate performance measurement"
+        },
+        {
+          icon: <Globe className="h-5 w-5 text-blue-500" />,
+          title: "Ecommerce tracking (Shopify, WooCommerce, Magento)",
+          description: "Set up comprehensive ecommerce tracking with purchase events and revenue attribution"
+        },
+        {
+          icon: <Settings className="h-5 w-5 text-blue-500" />,
+          title: "Cross-domain & multi-site tracking",
+          description: "Implement unified tracking across multiple domains and subdomains"
+        }
       ]
     },
     {
       icon: <Settings className="h-8 w-8 text-accent" />,
       title: "Tag Management",
       items: [
-        "Google Tag Manager (GTM) setup & debugging",
-        "Server-Side GTM (sGTM) implementation on GCP/AWS",
-        "Meta Conversions API & Google Ads Enhanced Conversions",
-        "Cookie lifespan & cookieless tracking solutions"
+        {
+          icon: <Zap className="h-5 w-5 text-purple-500" />,
+          title: "Google Tag Manager (GTM) setup & debugging",
+          description: "Professional GTM container setup with proper tag firing and debugging protocols"
+        },
+        {
+          icon: <Database className="h-5 w-5 text-purple-500" />,
+          title: "Server-Side GTM (sGTM) implementation on GCP/AWS",
+          description: "Deploy server-side tracking for improved data quality and privacy compliance"
+        },
+        {
+          icon: <Brain className="h-5 w-5 text-purple-500" />,
+          title: "Meta Conversions API & Google Ads Enhanced Conversions",
+          description: "Implement first-party data tracking for better ad performance and attribution"
+        },
+        {
+          icon: <Lock className="h-5 w-5 text-purple-500" />,
+          title: "Cookie lifespan & cookieless tracking solutions",
+          description: "Future-proof tracking strategies that work with evolving privacy regulations"
+        }
       ]
     },
     {
       icon: <TrendingUp className="h-8 w-8 text-accent" />,
       title: "Reporting & Dashboarding",
       items: [
-        "Looker Studio dashboards (quota-proof, automated)",
-        "Power BI & Tableau reporting",
-        "BigQuery pipelines & advanced SQL models",
-        "Automated email/slack/pdf reports"
+        {
+          icon: <BarChart3 className="h-5 w-5 text-green-500" />,
+          title: "Looker Studio dashboards (quota-proof, automated)",
+          description: "Custom dashboards with automated data refresh and quota optimization"
+        },
+        {
+          icon: <Database className="h-5 w-5 text-green-500" />,
+          title: "Power BI & Tableau reporting",
+          description: "Enterprise-grade reporting solutions with advanced visualizations"
+        },
+        {
+          icon: <Workflow className="h-5 w-5 text-green-500" />,
+          title: "BigQuery pipelines & advanced SQL models",
+          description: "Scalable data pipelines with custom SQL transformations and modeling"
+        },
+        {
+          icon: <Globe className="h-5 w-5 text-green-500" />,
+          title: "Automated email/slack/pdf reports",
+          description: "Scheduled report delivery with customizable formats and stakeholder distribution"
+        }
       ]
     },
     {
       icon: <Target className="h-8 w-8 text-accent" />,
       title: "Attribution & ROI Analytics",
       items: [
-        "Multi-touch attribution modeling",
-        "Cost vs revenue tracking",
-        "Customer Lifetime Value (LTV) dashboards",
-        "Offline conversions integration"
+        {
+          icon: <TrendingUp className="h-5 w-5 text-orange-500" />,
+          title: "Multi-touch attribution modeling",
+          description: "Advanced attribution models to understand the full customer journey"
+        },
+        {
+          icon: <BarChart3 className="h-5 w-5 text-orange-500" />,
+          title: "Cost vs revenue tracking",
+          description: "Comprehensive ROI analysis across all marketing channels and campaigns"
+        },
+        {
+          icon: <Users className="h-5 w-5 text-orange-500" />,
+          title: "Customer Lifetime Value (LTV) dashboards",
+          description: "Track and predict customer value over time with cohort analysis"
+        },
+        {
+          icon: <Globe className="h-5 w-5 text-orange-500" />,
+          title: "Offline conversions integration",
+          description: "Connect offline sales data with online marketing attribution"
+        }
       ]
     },
     {
       icon: <Lock className="h-8 w-8 text-accent" />,
       title: "Privacy & Compliance",
       items: [
-        "Consent Mode v2 setup",
-        "CMP integrations (Cookiebot, OneTrust, Didomi, Quantcast)",
-        "GDPR, PIPEDA, APP, PDPL-compliant data tracking",
-        "IP anonymization & privacy-first setups"
+        {
+          icon: <Shield className="h-5 w-5 text-red-500" />,
+          title: "Consent Mode v2 setup",
+          description: "Implement Google's latest consent management for privacy-compliant tracking"
+        },
+        {
+          icon: <Settings className="h-5 w-5 text-red-500" />,
+          title: "CMP integrations (Cookiebot, OneTrust, Didomi, Quantcast)",
+          description: "Seamless integration with major consent management platforms"
+        },
+        {
+          icon: <Lock className="h-5 w-5 text-red-500" />,
+          title: "GDPR, PIPEDA, APP, PDPL-compliant data tracking",
+          description: "Ensure compliance with global privacy regulations and data protection laws"
+        },
+        {
+          icon: <CheckCircle2 className="h-5 w-5 text-red-500" />,
+          title: "IP anonymization & privacy-first setups",
+          description: "Implement privacy-by-design tracking configurations"
+        }
       ]
     },
     {
       icon: <Database className="h-8 w-8 text-accent" />,
       title: "Data Quality & Validation",
       items: [
-        "Identify and fix data mismatches (GA4 vs Ads vs CRM)",
-        "Deduplicate and clean ecommerce & lead data",
-        "Bot traffic filtering",
-        "Channel grouping setup"
+        {
+          icon: <Settings className="h-5 w-5 text-teal-500" />,
+          title: "Identify and fix data mismatches (GA4 vs Ads vs CRM)",
+          description: "Audit and reconcile data discrepancies across platforms"
+        },
+        {
+          icon: <CheckCircle2 className="h-5 w-5 text-teal-500" />,
+          title: "Deduplicate and clean ecommerce & lead data",
+          description: "Clean and standardize data for accurate reporting and analysis"
+        },
+        {
+          icon: <Shield className="h-5 w-5 text-teal-500" />,
+          title: "Bot traffic filtering",
+          description: "Implement filters to exclude bot traffic and ensure data accuracy"
+        },
+        {
+          icon: <Target className="h-5 w-5 text-teal-500" />,
+          title: "Channel grouping setup",
+          description: "Organize traffic sources into meaningful channel groups for better analysis"
+        }
       ]
     },
     {
       icon: <Brain className="h-8 w-8 text-accent" />,
       title: "Predictive Analytics & Forecasting",
       items: [
-        "Anomaly detection in GA4 & BigQuery",
-        "Sales and revenue forecasting",
-        "Customer churn prediction",
-        "Marketing performance trend analysis"
+        {
+          icon: <TrendingUp className="h-5 w-5 text-indigo-500" />,
+          title: "Anomaly detection in GA4 & BigQuery",
+          description: "Automated alerts for unusual patterns and data anomalies"
+        },
+        {
+          icon: <BarChart3 className="h-5 w-5 text-indigo-500" />,
+          title: "Sales and revenue forecasting",
+          description: "Predictive models for revenue planning and business forecasting"
+        },
+        {
+          icon: <Users className="h-5 w-5 text-indigo-500" />,
+          title: "Customer churn prediction",
+          description: "Machine learning models to identify at-risk customers"
+        },
+        {
+          icon: <Globe className="h-5 w-5 text-indigo-500" />,
+          title: "Marketing performance trend analysis",
+          description: "Advanced analytics to predict marketing performance trends"
+        }
       ]
     },
     {
       icon: <Workflow className="h-8 w-8 text-accent" />,
       title: "CRM & Marketing Automation",
       items: [
-        "HubSpot & Salesforce GA4 integrations",
-        "Zapier / Make / n8n workflows",
-        "Segment & Rudderstack event pipelines",
-        "Slack & Sheets reporting automations"
+        {
+          icon: <Database className="h-5 w-5 text-pink-500" />,
+          title: "HubSpot & Salesforce GA4 integrations",
+          description: "Connect analytics data with CRM systems for unified customer insights"
+        },
+        {
+          icon: <Workflow className="h-5 w-5 text-pink-500" />,
+          title: "Zapier / Make / n8n workflows",
+          description: "Automate data flows between marketing tools and analytics platforms"
+        },
+        {
+          icon: <Globe className="h-5 w-5 text-pink-500" />,
+          title: "Segment & Rudderstack event pipelines",
+          description: "Implement customer data platforms for unified event tracking"
+        },
+        {
+          icon: <Settings className="h-5 w-5 text-pink-500" />,
+          title: "Slack & Sheets reporting automations",
+          description: "Automated reporting workflows for team collaboration and data sharing"
+        }
       ]
     },
     {
       icon: <GraduationCap className="h-8 w-8 text-accent" />,
       title: "Training & Workshops",
       items: [
-        "GA4 & GTM hands-on training for teams",
-        "Looker Studio dashboard workshops",
-        "Privacy & consent compliance training",
-        "Custom strategy sessions for marketing teams"
+        {
+          icon: <Users className="h-5 w-5 text-yellow-500" />,
+          title: "GA4 & GTM hands-on training for teams",
+          description: "Comprehensive training programs for marketing teams and analysts"
+        },
+        {
+          icon: <BarChart3 className="h-5 w-5 text-yellow-500" />,
+          title: "Looker Studio dashboard workshops",
+          description: "Learn to build and customize professional analytics dashboards"
+        },
+        {
+          icon: <Lock className="h-5 w-5 text-yellow-500" />,
+          title: "Privacy & consent compliance training",
+          description: "Stay updated on privacy regulations and compliant tracking practices"
+        },
+        {
+          icon: <Target className="h-5 w-5 text-yellow-500" />,
+          title: "Custom strategy sessions for marketing teams",
+          description: "Tailored consulting sessions for marketing strategy and analytics optimization"
+        }
       ]
     }
   ];
@@ -253,33 +397,26 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-4 text-foreground">{service.title}</h3>
-                  <ul className="space-y-3">
+                  <ul className="space-y-4">
                     {service.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start space-x-3">
-                        <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                          index === 0 ? 'bg-blue-100' : 
-                          index === 1 ? 'bg-purple-100' : 
-                          index === 2 ? 'bg-green-100' : 
-                          index === 3 ? 'bg-orange-100' : 
-                          index === 4 ? 'bg-red-100' : 
-                          index === 5 ? 'bg-teal-100' : 
-                          index === 6 ? 'bg-indigo-100' : 
-                          index === 7 ? 'bg-pink-100' : 
-                          'bg-yellow-100'
-                        }`}>
-                          <div className={`w-2 h-2 rounded-full ${
-                            index === 0 ? 'bg-blue-500' : 
-                            index === 1 ? 'bg-purple-500' : 
-                            index === 2 ? 'bg-green-500' : 
-                            index === 3 ? 'bg-orange-500' : 
-                            index === 4 ? 'bg-red-500' : 
-                            index === 5 ? 'bg-teal-500' : 
-                            index === 6 ? 'bg-indigo-500' : 
-                            index === 7 ? 'bg-pink-500' : 
-                            'bg-yellow-500'
-                          }`}></div>
+                        <div className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mt-1" style={{
+                          backgroundColor: index === 0 ? '#dbeafe' : 
+                                         index === 1 ? '#e9d5ff' : 
+                                         index === 2 ? '#dcfce7' : 
+                                         index === 3 ? '#fed7aa' : 
+                                         index === 4 ? '#fecaca' : 
+                                         index === 5 ? '#a7f3d0' : 
+                                         index === 6 ? '#c7d2fe' : 
+                                         index === 7 ? '#fbcfe8' : 
+                                         '#fef3c7'
+                        }}>
+                          {item.icon}
                         </div>
-                        <span className="text-muted-foreground leading-relaxed">{item}</span>
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
+                          <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                        </div>
                       </li>
                     ))}
                   </ul>
