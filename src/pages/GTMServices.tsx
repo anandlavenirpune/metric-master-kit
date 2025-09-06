@@ -20,13 +20,16 @@ import {
   AlertTriangle,
   Search,
   FileText,
-  Clock
+  Clock,
+  X
 } from "lucide-react";
 import heroImage from "@/assets/hero-analytics.jpg";
 import teamImage from "@/assets/team-analytics.jpg";
 import analyticsImage from "@/assets/analytics-tracking.jpg";
 import visualizationImage from "@/assets/visualization-reporting.jpg";
 import customWorkspaceBg from "@/assets/custom-workspace-bg.jpg";
+import wastedTimeImage from "@/assets/wasted-time-image.jpg";
+import complianceRiskImage from "@/assets/compliance-risk-image.jpg";
 const GTMServices = () => {
   const painPoints = [
     "Is your tracking data inconsistent or missing?",
@@ -277,36 +280,137 @@ const GTMServices = () => {
         </div>
       </section>
 
-      {/* Pain Points Section with Icons on Left, Text on Right, Image on Far Right */}
-      <section className="py-20 lg:py-32 bg-muted/30">
+      {/* Pain Points Section - Is Bad Tracking Costing You Money? */}
+      <section className="py-20 lg:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Is Your Tracking Causing You Headaches?</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Common tracking challenges that impact your data quality and business decisions
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">Is Bad Tracking Costing You Money?</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              Most businesses lose 30% of their marketing insights due to broken GTM setups. Here are the common symptoms:
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
-            <div className="lg:col-span-2">
-              <div className="grid grid-cols-1 gap-6">
-                {painPoints.map((point, index) => (
-                  <div key={index} className="flex items-start space-x-4 bg-white rounded-lg p-6 shadow-sm">
-                    <div className="flex-shrink-0">
-                      <AlertTriangle className="h-6 w-6 text-orange-500" />
-                    </div>
-                    <p className="text-lg text-gray-900 font-medium">{point}</p>
-                  </div>
-                ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+            {/* Problems List */}
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                  <X className="h-5 w-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Inconsistent or Missing Data</h3>
+                  <p className="text-gray-600">Your GA4 shows "(not set)" or events fire randomly, making decisions based on unreliable data.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                  <X className="h-5 w-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Site Speed Issues</h3>
+                  <p className="text-gray-600">Multiple tracking pixels load synchronously, slowing your site and hurting SEO rankings.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                  <X className="h-5 w-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Pixel Chaos</h3>
+                  <p className="text-gray-600">Managing tags for Google Ads, Facebook, LinkedIn, TikTok becomes a nightmare without proper organization.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                  <X className="h-5 w-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Privacy Compliance Gaps</h3>
+                  <p className="text-gray-600">GDPR, CCPA, and Consent Mode v2 requirements leave you vulnerable to fines and blocked tracking.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                  <X className="h-5 w-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">No Documentation</h3>
+                  <p className="text-gray-600">Your team has no control or understanding of what's actually firing on your site and why.</p>
+                </div>
               </div>
             </div>
+            
+            {/* Right side image with testimonial overlay */}
             <div className="relative">
               <img 
-                src={teamImage} 
-                alt="Team working on analytics"
+                src="/lovable-uploads/8bf7f4e6-3ae3-4c97-a5fb-e36d7527262d.png" 
+                alt="Frustrated person with analytics problems"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
+              <div className="absolute bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg max-w-xs">
+                <p className="text-sm font-medium">"We lost $50k in ad spend due to broken tracking"</p>
+                <p className="text-xs opacity-90">- E-commerce client before GTM fix</p>
+              </div>
             </div>
+          </div>
+          
+          {/* Impact Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Lost Revenue Card */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-sm">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src="/lovable-uploads/d03b1167-1e66-4265-a353-06b24147817c.png" 
+                  alt="Lost Revenue concept"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Lost Revenue</h3>
+                <p className="text-gray-600">Inaccurate tracking means you're optimizing for the wrong metrics, bleeding ad budget daily.</p>
+              </div>
+            </div>
+            
+            {/* Wasted Time Card */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-sm">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src={wastedTimeImage} 
+                  alt="Wasted Time concept"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Wasted Time</h3>
+                <p className="text-gray-600">Your team spends hours debugging tracking issues instead of growing the business.</p>
+              </div>
+            </div>
+            
+            {/* Compliance Risk Card */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-sm">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src={complianceRiskImage} 
+                  alt="Compliance Risk concept"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Compliance Risk</h3>
+                <p className="text-gray-600">Privacy violations can result in massive fines and complete loss of tracking capabilities.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <Button className="btn-hero text-lg">
+              See How We Fix These Issues
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </div>
       </section>
