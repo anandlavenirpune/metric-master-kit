@@ -339,6 +339,25 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Navigation Header */}
+      <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center">
+              <h1 className="text-xl font-bold text-primary">Marketing Analytics</h1>
+            </div>
+            <nav className="hidden md:flex space-x-8">
+              <a href="/" className="text-gray-900 font-medium border-b-2 border-primary">Home</a>
+              <a href="/gtm-services" className="text-gray-600 hover:text-gray-900 transition-colors">GTM Services</a>
+            </nav>
+            <div className="md:hidden">
+              <Button variant="ghost" size="sm">
+                <Settings className="h-5 w-5" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </header>
       {/* Hero Section */}
       <section className="section-hero relative overflow-hidden py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-primary-dark/90"></div>
