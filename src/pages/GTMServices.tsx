@@ -1158,7 +1158,7 @@ const GTMServices = () => {
             {/* Left Column - Common Tracking Problems We Solve */}
             <div>
               <h3 className="heading-card mb-8">Common Tracking Problems We Solve</h3>
-              <div className="bg-gray-100 rounded-lg border border-gray-200 p-6 shadow-sm space-y-6">
+              <div className="bg-white rounded-lg border border-gray-300 p-6 shadow-sm space-y-6">
                 {problemSolutionFAQs.map((faq, index) => (
                   <div key={index}>
                     <h4 className="font-semibold text-gray-900 mb-3">{faq.question}</h4>
@@ -1171,7 +1171,7 @@ const GTMServices = () => {
             {/* Right Column - Your Questions Answered */}
             <div>
               <h3 className="heading-card mb-8">Your Questions Answered</h3>
-              <div className="bg-gray-100 rounded-lg border border-gray-200 shadow-sm">
+              <div className="bg-white rounded-lg border border-gray-300 shadow-sm">
                 <Accordion type="single" collapsible className="w-full">
                   {generalFAQs.map((faq, index) => (
                     <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray-200 last:border-b-0">
