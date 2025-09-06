@@ -31,6 +31,8 @@ import customWorkspaceBg from "@/assets/custom-workspace-bg.jpg";
 import wastedTimeImage from "@/assets/wasted-time-image.jpg";
 import complianceRiskImage from "@/assets/compliance-risk-image.jpg";
 import trackingFrustrationBg from "@/assets/tracking-frustration-bg.jpg";
+import workspaceSetupBg from "@/assets/workspace-setup-bg.jpg";
+import consultationSetupBg from "@/assets/consultation-setup-bg.jpg";
 const GTMServices = () => {
   const painPoints = [
     "Is your tracking data inconsistent or missing?",
@@ -574,41 +576,210 @@ const GTMServices = () => {
       </section>
 
       {/* Packages Section */}
-      <section className="py-20 lg:py-32 bg-muted/30">
+      <section className="py-20 lg:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Packages</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Choose the right GTM package for your business needs
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Packages</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choose the perfect GTM solution for your business needs and budget.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {packages.map((pkg, index) => (
-              <div key={index} className={`bg-white rounded-lg border p-8 shadow-sm hover:shadow-md transition-shadow duration-300 relative ${pkg.popular ? 'border-primary ring-2 ring-primary/20' : 'border-gray-200'}`}>
-                {pkg.popular && (
-                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground">
-                    Most Popular
-                  </Badge>
-                )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
-                  <p className="text-gray-600 mb-4">{pkg.description}</p>
-                  <p className="text-3xl font-bold text-primary">{pkg.price}</p>
+          {/* Pricing Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            {/* Starter Package */}
+            <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
+                <div className="mb-4">
+                  <span className="text-4xl font-bold text-blue-600">$2,500</span>
                 </div>
-                <ul className="space-y-3 mb-8">
-                  {pkg.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start">
-                      <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                      <span className="text-gray-600">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Button className="w-full" variant={pkg.popular ? "default" : "outline"}>
-                  Get Started
-                </Button>
+                <p className="text-gray-600 mb-6">Perfect for small businesses starting with GTM</p>
               </div>
-            ))}
+              
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center">
+                  <CheckCircle2 className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Basic GTM container setup</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle2 className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">10 custom events tracked</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle2 className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Basic GA4 integration</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle2 className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">2-week support</span>
+                </li>
+              </ul>
+              
+              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                Get Started
+              </Button>
+            </div>
+
+            {/* Advanced Package - Most Popular */}
+            <div className="bg-white rounded-2xl border-2 border-blue-500 p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                  Most Popular
+                </span>
+              </div>
+              
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Advanced</h3>
+                <div className="mb-4">
+                  <span className="text-4xl font-bold text-blue-600">$5,500</span>
+                </div>
+                <p className="text-gray-600 mb-6">Complete solution for growing businesses</p>
+              </div>
+              
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center">
+                  <CheckCircle2 className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Full GTM audit & optimization</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle2 className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Enhanced ecommerce tracking</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle2 className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Privacy compliance setup</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle2 className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">1-month support & training</span>
+                </li>
+              </ul>
+              
+              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                Choose Advanced
+              </Button>
+            </div>
+
+            {/* Enterprise Package */}
+            <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
+                <div className="mb-4">
+                  <span className="text-4xl font-bold text-blue-600">Custom</span>
+                </div>
+                <p className="text-gray-600 mb-6">For large-scale, complex implementations</p>
+              </div>
+              
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center">
+                  <CheckCircle2 className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Multi-domain server-side GTM</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle2 className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Custom training workshops</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle2 className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Dedicated account manager</span>
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle2 className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700">Ongoing optimization</span>
+                </li>
+              </ul>
+              
+              <Button className="w-full bg-gray-900 hover:bg-gray-800 text-white">
+                Contact Sales
+              </Button>
+            </div>
+          </div>
+
+          {/* What's Included in Every Package */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            {/* Left side - What's Included */}
+            <div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-8">What's Included in Every Package</h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mt-1">
+                    <FileText className="h-4 w-4 text-blue-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Detailed Documentation</h4>
+                    <p className="text-gray-600">Complete setup guides and best practices documentation</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mt-1">
+                    <Shield className="h-4 w-4 text-blue-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Quality Assurance</h4>
+                    <p className="text-gray-600">Rigorous testing across staging and production environments</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mt-1">
+                    <Users className="h-4 w-4 text-blue-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Expert Support</h4>
+                    <p className="text-gray-600">Direct access to certified GTM specialists</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right side - Image */}
+            <div className="relative">
+              <img 
+                src={workspaceSetupBg} 
+                alt="Professional workspace setup"
+                className="w-full h-80 rounded-2xl object-cover shadow-lg"
+              />
+            </div>
+          </div>
+
+          {/* Bottom two cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Need a Custom Package? */}
+            <div className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <img 
+                src={workspaceSetupBg} 
+                alt="Custom workspace setup"
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-black/50"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                <h3 className="text-2xl font-bold mb-4">Need a Custom Package?</h3>
+                <p className="text-white/90 mb-6">We can mix and match services to fit your exact requirements.</p>
+                <a href="#" className="text-blue-400 hover:text-blue-300 font-semibold transition-colors">
+                  Build Your Package →
+                </a>
+              </div>
+            </div>
+
+            {/* Questions About Pricing? */}
+            <div className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <img 
+                src={consultationSetupBg} 
+                alt="Consultation workspace"
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-black/50"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                <h3 className="text-2xl font-bold mb-4">Questions About Pricing?</h3>
+                <p className="text-white/90 mb-6">Schedule a free consultation to discuss your specific needs.</p>
+                <a href="#" className="text-blue-400 hover:text-blue-300 font-semibold transition-colors">
+                  Book Free Consultation →
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
