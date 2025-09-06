@@ -767,17 +767,18 @@ const GTMServices = () => {
             </div>
 
             {/* Questions About Pricing? */}
-            <div className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <img 
-                src={consultationSetupBg} 
-                alt="Consultation workspace"
-                className="w-full h-64 object-cover"
-              />
-              <div className="absolute inset-0 bg-black/50"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                <h3 className="text-2xl font-bold mb-4">Questions About Pricing?</h3>
-                <p className="text-white/90 mb-6">Schedule a free consultation to discuss your specific needs.</p>
-                <a href="#" className="text-blue-400 hover:text-blue-300 font-semibold transition-colors">
+            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+              <div className="p-8">
+                <div className="mb-6">
+                  <img 
+                    src={consultationSetupBg} 
+                    alt="Consultation workspace"
+                    className="w-full h-48 object-cover rounded-lg"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Questions About Pricing?</h3>
+                <p className="text-gray-600 mb-6">Schedule a free consultation to discuss your specific needs.</p>
+                <a href="#" className="text-blue-600 hover:text-blue-700 font-semibold transition-colors">
                   Book Free Consultation →
                 </a>
               </div>
