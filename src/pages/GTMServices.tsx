@@ -34,6 +34,10 @@ import trackingFrustrationBg from "@/assets/tracking-frustration-bg.jpg";
 import workspaceSetupBg from "@/assets/workspace-setup-bg.jpg";
 import consultationSetupBg from "@/assets/consultation-setup-bg.jpg";
 import customPackageBg from "@/assets/custom-package-bg.jpg";
+import processAuditBg from "@/assets/process-audit-bg.jpg";
+import processImplementationBg from "@/assets/process-implementation-bg.jpg";
+import processTestingBg from "@/assets/process-testing-bg.jpg";
+import processDocumentationBg from "@/assets/process-documentation-bg.jpg";
 const GTMServices = () => {
   const painPoints = [
     "Is your tracking data inconsistent or missing?",
@@ -787,26 +791,144 @@ const GTMServices = () => {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20 lg:py-32">
+      {/* Our 5-Step Process */}
+      <section className="py-20 lg:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Our Process</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              A proven 5-step approach to GTM success
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our 5-Step Process</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From initial audit to ongoing optimization, we ensure your tracking is flawless.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-            {processSteps.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  {step.step}
-                </div>
-                <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
-                <p className="text-sm text-muted-foreground">{step.description}</p>
+          {/* Process Steps Grid */}
+          <div className="space-y-12">
+            {/* Step 1 - Audit & Consultation */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg order-2 lg:order-1">
+                <img 
+                  src={processAuditBg} 
+                  alt="WORK decorative text"
+                  className="w-full h-80 object-cover"
+                />
+                <div className="absolute inset-0 bg-black/20"></div>
               </div>
-            ))}
+              <div className="order-1 lg:order-2">
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">
+                    1
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-4">Audit & Consultation</h3>
+                    <p className="text-lg text-gray-600 leading-relaxed">
+                      We thoroughly review your current tracking setup and identify all issues affecting data quality and site performance.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 2 - Implementation */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">
+                    2
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-4">Implementation</h3>
+                    <p className="text-lg text-gray-600 leading-relaxed">
+                      Configure your containers, triggers, and tags with best practices for optimal performance and data accuracy.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src={processImplementationBg} 
+                  alt="Implementation flowchart"
+                  className="w-full h-80 object-cover"
+                />
+                <div className="absolute inset-0 bg-black/10"></div>
+              </div>
+            </div>
+
+            {/* Step 3 - Testing & QA */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg order-2 lg:order-1">
+                <img 
+                  src={processTestingBg} 
+                  alt="Testing interface"
+                  className="w-full h-80 object-cover"
+                />
+                <div className="absolute inset-0 bg-black/20"></div>
+              </div>
+              <div className="order-1 lg:order-2">
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">
+                    3
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-4">Testing & QA</h3>
+                    <p className="text-lg text-gray-600 leading-relaxed">
+                      Rigorous validation across staging and production environments to ensure everything works perfectly before going live.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 4 - Documentation & Training */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">
+                    4
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-4">Documentation & Training</h3>
+                    <p className="text-lg text-gray-600 leading-relaxed">
+                      Complete handover with full implementation documentation and team training sessions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-blue-50 rounded-2xl p-12 shadow-lg flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <FileText className="h-12 w-12 text-blue-600" />
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900 mb-2">Documentation</h4>
+                  <p className="text-gray-600">Complete handover with implementation guides and best practices</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 5 - Ongoing Optimization */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="bg-blue-600 rounded-2xl p-12 shadow-lg text-white order-2 lg:order-1">
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <TrendingUp className="h-12 w-12 text-white" />
+                  </div>
+                  <h4 className="text-2xl font-bold mb-2">Ongoing Optimization</h4>
+                  <p className="text-blue-100">Continuous audits and updates to keep your tracking perfect</p>
+                </div>
+              </div>
+              <div className="order-1 lg:order-2">
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">
+                    5
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-4">Ongoing Optimization</h3>
+                    <p className="text-lg text-gray-600 leading-relaxed">
+                      Continuous monitoring and optimization to ensure your tracking stays accurate as your business evolves.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
