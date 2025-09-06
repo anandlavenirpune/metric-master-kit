@@ -292,8 +292,8 @@ const GTMServices = () => {
       <section className="py-20 lg:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">Is Bad Tracking Costing You Money?</h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            <h2 className="heading-section mb-6 text-gray-900">Is Bad Tracking Costing You Money?</h2>
+            <p className="text-description text-xl max-w-4xl mx-auto text-gray-600">
               Most businesses lose 30% of their marketing insights due to broken GTM setups. Here are the common symptoms:
             </p>
           </div>
@@ -306,8 +306,8 @@ const GTMServices = () => {
                   <X className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Inconsistent or Missing Data</h3>
-                  <p className="text-gray-600">Your GA4 shows "(not set)" or events fire randomly, making decisions based on unreliable data.</p>
+                  <h3 className="heading-card text-xl text-gray-900">Inconsistent or Missing Data</h3>
+                  <p className="text-description text-gray-600">Your GA4 shows "(not set)" or events fire randomly, making decisions based on unreliable data.</p>
                 </div>
               </div>
               
@@ -316,8 +316,8 @@ const GTMServices = () => {
                   <X className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Site Speed Issues</h3>
-                  <p className="text-gray-600">Multiple tracking pixels load synchronously, slowing your site and hurting SEO rankings.</p>
+                  <h3 className="heading-card text-xl text-gray-900">Site Speed Issues</h3>
+                  <p className="text-description text-gray-600">Multiple tracking pixels load synchronously, slowing your site and hurting SEO rankings.</p>
                 </div>
               </div>
               
@@ -326,8 +326,8 @@ const GTMServices = () => {
                   <X className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Pixel Chaos</h3>
-                  <p className="text-gray-600">Managing tags for Google Ads, Facebook, LinkedIn, TikTok becomes a nightmare without proper organization.</p>
+                  <h3 className="heading-card text-xl text-gray-900">Pixel Chaos</h3>
+                  <p className="text-description text-gray-600">Managing tags for Google Ads, Facebook, LinkedIn, TikTok becomes a nightmare without proper organization.</p>
                 </div>
               </div>
               
@@ -336,8 +336,8 @@ const GTMServices = () => {
                   <X className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Privacy Compliance Gaps</h3>
-                  <p className="text-gray-600">GDPR, CCPA, and Consent Mode v2 requirements leave you vulnerable to fines and blocked tracking.</p>
+                  <h3 className="heading-card text-xl text-gray-900">Privacy Compliance Gaps</h3>
+                  <p className="text-description text-gray-600">GDPR, CCPA, and Consent Mode v2 requirements leave you vulnerable to fines and blocked tracking.</p>
                 </div>
               </div>
               
@@ -346,8 +346,8 @@ const GTMServices = () => {
                   <X className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">No Documentation</h3>
-                  <p className="text-gray-600">Your team has no control or understanding of what's actually firing on your site and why.</p>
+                  <h3 className="heading-card text-xl text-gray-900">No Documentation</h3>
+                  <p className="text-description text-gray-600">Your team has no control or understanding of what's actually firing on your site and why.</p>
                 </div>
               </div>
             </div>
@@ -378,8 +378,8 @@ const GTMServices = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Lost Revenue</h3>
-                <p className="text-gray-600">Inaccurate tracking means you're optimizing for the wrong metrics, bleeding ad budget daily.</p>
+                <h3 className="heading-card text-gray-900">Lost Revenue</h3>
+                <p className="text-description text-gray-600">Inaccurate tracking means you're optimizing for the wrong metrics, bleeding ad budget daily.</p>
               </div>
             </div>
             
@@ -393,8 +393,8 @@ const GTMServices = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Wasted Time</h3>
-                <p className="text-gray-600">Your team spends hours debugging tracking issues instead of growing the business.</p>
+                <h3 className="heading-card text-gray-900">Wasted Time</h3>
+                <p className="text-description text-gray-600">Your team spends hours debugging tracking issues instead of growing the business.</p>
               </div>
             </div>
             
@@ -408,8 +408,8 @@ const GTMServices = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Compliance Risk</h3>
-                <p className="text-gray-600">Privacy violations can result in massive fines and complete loss of tracking capabilities.</p>
+                <h3 className="heading-card text-gray-900">Compliance Risk</h3>
+                <p className="text-description text-gray-600">Privacy violations can result in massive fines and complete loss of tracking capabilities.</p>
               </div>
             </div>
           </div>
@@ -427,8 +427,8 @@ const GTMServices = () => {
       <section className="py-20 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Our GTM Services</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <h2 className="heading-section mb-6">Our GTM Services</h2>
+            <p className="text-description text-xl max-w-3xl mx-auto">
               Complete Google Tag Manager solutions from setup to advanced server-side implementations.
             </p>
           </div>
@@ -442,22 +442,22 @@ const GTMServices = () => {
                   <Settings className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">GTM Setup & Container Organization</h3>
+                  <h3 className="heading-card">GTM Setup & Container Organization</h3>
                 </div>
               </div>
               
               <div className="space-y-3 mb-6">
                 <div className="flex items-start space-x-3">
                   <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Clean container structure with proper naming conventions</span>
+                  <span className="text-description text-gray-700">Clean container structure with proper naming conventions</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Professional data layer implementation</span>
+                  <span className="text-description text-gray-700">Professional data layer implementation</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Migration from hard-coded tags to GTM</span>
+                  <span className="text-description text-gray-700">Migration from hard-coded tags to GTM</span>
                 </div>
               </div>
               
@@ -477,22 +477,22 @@ const GTMServices = () => {
                   <Search className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">GTM Audits & Optimizations</h3>
+                  <h3 className="heading-card">GTM Audits & Optimizations</h3>
                 </div>
               </div>
               
               <div className="space-y-3 mb-6">
                 <div className="flex items-start space-x-3">
                   <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Complete audit of tags, triggers, and variables</span>
+                  <span className="text-description text-gray-700">Complete audit of tags, triggers, and variables</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Fix redundant and duplicate tags</span>
+                  <span className="text-description text-gray-700">Fix redundant and duplicate tags</span>
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Improve site speed and performance</span>
+                  <span className="text-description text-gray-700">Improve site speed and performance</span>
                 </div>
               </div>
               
@@ -513,9 +513,9 @@ const GTMServices = () => {
               <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-6">
                 <Database className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Server-Side GTM</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">Advanced privacy-first tracking with server-side implementations on GCP/AWS.</p>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <h3 className="heading-card text-gray-900">Server-Side GTM</h3>
+              <p className="text-description mb-6">Advanced privacy-first tracking with server-side implementations on GCP/AWS.</p>
+              <ul className="space-y-2 text-description-small">
                 <li>• Meta CAPI setup</li>
                 <li>• Google Ads Enhanced Conversions</li>
                 <li>• Cookieless tracking ready</li>
@@ -527,9 +527,9 @@ const GTMServices = () => {
               <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-6">
                 <TrendingUp className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Custom Event Tracking</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">Track every user interaction that matters to your business.</p>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <h3 className="heading-card text-gray-900">Custom Event Tracking</h3>
+              <p className="text-description mb-6">Track every user interaction that matters to your business.</p>
+              <ul className="space-y-2 text-description-small">
                 <li>• Forms, clicks, video views</li>
                 <li>• Enhanced Ecommerce tracking</li>
                 <li>• Shopify, WooCommerce, Magento</li>
@@ -541,9 +541,9 @@ const GTMServices = () => {
               <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-6">
                 <Shield className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Privacy & Compliance</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">Stay compliant with global privacy regulations.</p>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <h3 className="heading-card text-gray-900">Privacy & Compliance</h3>
+              <p className="text-description mb-6">Stay compliant with global privacy regulations.</p>
+              <ul className="space-y-2 text-description-small">
                 <li>• Consent Mode v2 setup</li>
                 <li>• CMP integration</li>
                 <li>• GDPR, CCPA compliance</li>
@@ -595,11 +595,11 @@ const GTMServices = () => {
             {/* Starter Package */}
             <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
               <div className="mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
+                <h3 className="heading-card text-gray-900">Starter</h3>
                 <div className="mb-4">
                   <span className="text-4xl font-bold text-blue-600">$2,500</span>
                 </div>
-                <p className="text-gray-600 mb-6">Perfect for small businesses starting with GTM</p>
+                <p className="text-description mb-6">Perfect for small businesses starting with GTM</p>
               </div>
               
               <ul className="space-y-4 mb-8">
@@ -635,11 +635,11 @@ const GTMServices = () => {
               </div>
               
               <div className="mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Advanced</h3>
+                <h3 className="heading-card text-gray-900">Advanced</h3>
                 <div className="mb-4">
                   <span className="text-4xl font-bold text-blue-600">$5,500</span>
                 </div>
-                <p className="text-gray-600 mb-6">Complete solution for growing businesses</p>
+                <p className="text-description mb-6">Complete solution for growing businesses</p>
               </div>
               
               <ul className="space-y-4 mb-8">
@@ -669,11 +669,11 @@ const GTMServices = () => {
             {/* Enterprise Package */}
             <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
               <div className="mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
+                <h3 className="heading-card text-gray-900">Enterprise</h3>
                 <div className="mb-4">
                   <span className="text-4xl font-bold text-blue-600">Custom</span>
                 </div>
-                <p className="text-gray-600 mb-6">For large-scale, complex implementations</p>
+                <p className="text-description mb-6">For large-scale, complex implementations</p>
               </div>
               
               <ul className="space-y-4 mb-8">
@@ -705,7 +705,7 @@ const GTMServices = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             {/* Left side - What's Included */}
             <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-8">What's Included in Every Package</h3>
+              <h3 className="heading-section text-gray-900 mb-8">What's Included in Every Package</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -937,7 +937,7 @@ const GTMServices = () => {
       <section className="py-20 lg:py-32 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Why Choose Us</h2>
+            <h2 className="heading-section mb-6">Why Choose Us</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Expert GTM specialists with proven results
             </p>
@@ -956,7 +956,7 @@ const GTMServices = () => {
                     {reason.icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-gray-900">{reason.title}</h3>
+                    <h3 className="heading-card text-xl text-gray-900">{reason.title}</h3>
                     <p className="text-gray-600">{reason.description}</p>
                   </div>
                 </div>
@@ -970,7 +970,7 @@ const GTMServices = () => {
       <section className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Industries We Support</h2>
+            <h2 className="heading-section mb-6">Industries We Support</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Specialized GTM solutions for every industry vertical
             </p>
@@ -998,7 +998,7 @@ const GTMServices = () => {
       {/* Need a Custom Integration CTA */}
       <section className="py-16 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Need a Custom Integration?</h2>
+          <h2 className="heading-section text-2xl md:text-3xl mb-4">Need a Custom Integration?</h2>
           <p className="text-lg mb-8 opacity-90">
             Our development team can build custom connectors for any platform or tool you use.
           </p>
@@ -1012,7 +1012,7 @@ const GTMServices = () => {
       <section className="py-20 lg:py-32 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">FAQs</h2>
+            <h2 className="heading-section mb-6">FAQs</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Answers to common questions about GTM implementation
             </p>
@@ -1022,7 +1022,7 @@ const GTMServices = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             {/* Left Column - Common Tracking Problems We Solve */}
             <div>
-              <h3 className="text-2xl font-bold mb-8">Common Tracking Problems We Solve</h3>
+              <h3 className="heading-card mb-8">Common Tracking Problems We Solve</h3>
               <div className="space-y-6">
                 {problemSolutionFAQs.map((faq, index) => (
                   <div key={index} className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
@@ -1035,7 +1035,7 @@ const GTMServices = () => {
 
             {/* Right Column - Your Questions Answered */}
             <div>
-              <h3 className="text-2xl font-bold mb-8">Your Questions Answered</h3>
+              <h3 className="heading-card mb-8">Your Questions Answered</h3>
               <div className="space-y-6">
                 {generalFAQs.map((faq, index) => (
                   <div key={index} className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
@@ -1049,7 +1049,7 @@ const GTMServices = () => {
 
           {/* The 3 Fixes That Make the Biggest Impact - Below FAQs */}
           <div>
-            <h3 className="text-2xl font-bold mb-8 text-center">The 3 Fixes That Make the Biggest Impact</h3>
+            <h3 className="heading-card mb-8 text-center">The 3 Fixes That Make the Biggest Impact</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {effectiveFixes.map((fix, index) => (
                 <div key={index} className="bg-white rounded-lg border border-gray-200 p-8 shadow-sm text-center">

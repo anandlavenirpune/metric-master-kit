@@ -111,6 +111,27 @@ All colors MUST be HSL.
 }
 
 @layer components {
+  /* Typography System */
+  .heading-primary {
+    @apply text-4xl md:text-5xl font-bold text-foreground;
+  }
+  
+  .heading-section {
+    @apply text-3xl md:text-4xl font-bold text-foreground;
+  }
+  
+  .heading-card {
+    @apply text-2xl font-bold text-foreground mb-4;
+  }
+  
+  .text-description {
+    @apply text-base text-muted-foreground leading-relaxed;
+  }
+  
+  .text-description-small {
+    @apply text-sm text-muted-foreground leading-relaxed;
+  }
+
   /* Hero CTA Button */
   .btn-hero {
     @apply bg-gradient-to-r from-accent to-accent-light text-accent-foreground font-semibold px-8 py-4 rounded-xl shadow-[var(--shadow-button)] hover:shadow-lg hover:scale-105 transition-all duration-300;
