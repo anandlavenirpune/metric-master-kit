@@ -310,33 +310,132 @@ const GTMServices = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Our GTM Services - New Layout matching screenshot */}
       <section className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Our GTM Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive Google Tag Manager solutions for every business need
+              Complete Google Tag Manager solutions from setup to advanced server-side implementations.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg border border-gray-200 p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center mb-6" style={{
-                  backgroundColor: index === 0 ? '#e0e7ff' : 
-                                 index === 1 ? '#f3e8ff' : 
-                                 index === 2 ? '#ecfdf5' : 
-                                 index === 3 ? '#fed7aa' : 
-                                 index === 4 ? '#fecaca' : 
-                                 '#e0e7ff'
-                }}>
-                  {service.icon}
+          {/* Top Row - 2 Main Services with Images */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            {/* GTM Setup & Container Organization */}
+            <div>
+              <div className="flex items-start space-x-4 mb-6">
+                <div className="flex-shrink-0 w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+                  <Settings className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{service.description}</p>
+                <div>
+                  <h3 className="text-2xl font-bold mb-2">GTM Setup & Container Organization</h3>
+                </div>
               </div>
-            ))}
+              
+              <div className="space-y-3 mb-6">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">Clean container structure with proper naming conventions</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">Professional data layer implementation</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">Migration from hard-coded tags to GTM</span>
+                </div>
+              </div>
+              
+              <div className="rounded-lg overflow-hidden">
+                <img 
+                  src={analyticsImage} 
+                  alt="GTM Container Setup"
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+            </div>
+
+            {/* GTM Audits & Optimizations */}
+            <div>
+              <div className="flex items-start space-x-4 mb-6">
+                <div className="flex-shrink-0 w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center">
+                  <Search className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-2">GTM Audits & Optimizations</h3>
+                </div>
+              </div>
+              
+              <div className="space-y-3 mb-6">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">Complete audit of tags, triggers, and variables</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">Fix redundant and duplicate tags</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">Improve site speed and performance</span>
+                </div>
+              </div>
+              
+              <div className="rounded-lg overflow-hidden">
+                <img 
+                  src={visualizationImage} 
+                  alt="GTM Optimization Dashboard"
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Row - 3 Service Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Server-Side GTM */}
+            <div className="bg-blue-50 rounded-lg p-8">
+              <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
+                <Database className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Server-Side GTM</h3>
+              <p className="text-gray-700 mb-4">Advanced privacy-first tracking with server-side implementations on GCP/AWS.</p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• Meta CAPI setup</li>
+                <li>• Google Ads Enhanced Conversions</li>
+                <li>• Cookieless tracking ready</li>
+              </ul>
+            </div>
+
+            {/* Custom Event Tracking */}
+            <div className="bg-purple-50 rounded-lg p-8">
+              <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
+                <Target className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Custom Event Tracking</h3>
+              <p className="text-gray-700 mb-4">Track every user interaction that matters to your business.</p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• Forms, clicks, video views</li>
+                <li>• Enhanced Ecommerce tracking</li>
+                <li>• Shopify, WooCommerce, Magento</li>
+              </ul>
+            </div>
+
+            {/* Privacy & Compliance */}
+            <div className="bg-green-50 rounded-lg p-8">
+              <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
+                <Shield className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Privacy & Compliance</h3>
+              <p className="text-gray-700 mb-4">Stay compliant with global privacy regulations.</p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• Consent Mode v2 setup</li>
+                <li>• CMP integration</li>
+                <li>• GDPR, CCPA compliance</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
