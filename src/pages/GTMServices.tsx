@@ -241,55 +241,71 @@ const GTMServices = () => {
           </div>
         </div>
       </header>
-      {/* Hero Section */}
+      {/* Hero Section - Dark Background with Image on Right */}
       <section className="section-hero relative overflow-hidden py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/90 to-primary-dark/90"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        ></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Google Tag Manager Services
-              <br />
-              <span className="text-accent">for Accurate, Scalable Tracking</span>
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90">
-              We help businesses set up, audit, and optimize GTM so you capture the right data, improve marketing ROI, and stay privacy-compliant.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="btn-hero text-lg">
-                Get a Free GTM Audit
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button variant="outline" className="text-lg border-white text-white hover:bg-white hover:text-primary">
-                Talk to a GTM Specialist
-              </Button>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Google Tag Manager Services
+                <br />
+                <span className="text-accent">for Accurate, Scalable Tracking</span>
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 leading-relaxed opacity-90">
+                We help businesses set up, audit, and optimize GTM so you capture the right data, improve marketing ROI, and stay privacy-compliant.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button className="btn-hero text-lg">
+                  Get a Free GTM Audit
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+                <Button variant="outline" className="text-lg border-white text-white hover:bg-white hover:text-primary">
+                  Talk to a GTM Specialist
+                </Button>
+              </div>
+            </div>
+            <div className="relative">
+              <img 
+                src={heroImage} 
+                alt="GTM Analytics Dashboard"
+                className="w-full h-auto rounded-lg shadow-2xl"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Pain Points Section */}
+      {/* Pain Points Section with Icons on Left, Text on Right, Image on Far Right */}
       <section className="py-20 lg:py-32 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Why GTM Services Matter</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Is Your Tracking Causing You Headaches?</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Common tracking challenges that impact your data quality and business decisions
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {painPoints.map((point, index) => (
-              <div key={index} className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="flex items-start space-x-3">
-                  <AlertTriangle className="h-6 w-6 text-orange-500 mt-1 flex-shrink-0" />
-                  <p className="text-gray-900 font-medium">{point}</p>
-                </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+            <div className="lg:col-span-2">
+              <div className="grid grid-cols-1 gap-6">
+                {painPoints.map((point, index) => (
+                  <div key={index} className="flex items-start space-x-4 bg-white rounded-lg p-6 shadow-sm">
+                    <div className="flex-shrink-0">
+                      <AlertTriangle className="h-6 w-6 text-orange-500" />
+                    </div>
+                    <p className="text-lg text-gray-900 font-medium">{point}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div className="relative">
+              <img 
+                src={teamImage} 
+                alt="Team working on analytics"
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -307,7 +323,14 @@ const GTMServices = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-lg border border-gray-200 p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="mb-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center mb-6" style={{
+                  backgroundColor: index === 0 ? '#e0e7ff' : 
+                                 index === 1 ? '#f3e8ff' : 
+                                 index === 2 ? '#ecfdf5' : 
+                                 index === 3 ? '#fed7aa' : 
+                                 index === 4 ? '#fecaca' : 
+                                 '#e0e7ff'
+                }}>
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">{service.title}</h3>
@@ -396,7 +419,14 @@ const GTMServices = () => {
             {whyChooseUs.map((reason, index) => (
               <div key={index} className="bg-white rounded-lg border border-gray-200 p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
                 <div className="flex items-start space-x-4">
-                  {reason.icon}
+                  <div className="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center" style={{
+                    backgroundColor: index === 0 ? '#e0e7ff' : 
+                                   index === 1 ? '#ecfdf5' : 
+                                   index === 2 ? '#fed7aa' : 
+                                   '#f3e8ff'
+                  }}>
+                    {reason.icon}
+                  </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2 text-gray-900">{reason.title}</h3>
                     <p className="text-gray-600">{reason.description}</p>
@@ -420,7 +450,7 @@ const GTMServices = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
-              <div key={index} className="relative rounded-lg overflow-hidden shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] transition-shadow duration-300 aspect-[4/3]">
+              <div key={index} className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/3]">
                 <img 
                   src={useCase.image} 
                   alt={`${useCase.title} industry`}
@@ -437,7 +467,20 @@ const GTMServices = () => {
         </div>
       </section>
 
-      {/* FAQs Section */}
+      {/* Need a Custom Integration CTA */}
+      <section className="py-16 bg-gray-900 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Need a Custom Integration?</h2>
+          <p className="text-lg mb-8 opacity-90">
+            Our development team can build custom connectors for any platform or tool you use.
+          </p>
+          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            Request Custom Integration
+          </Button>
+        </div>
+      </section>
+
+      {/* FAQs Section - Exact Layout from Design */}
       <section className="py-20 lg:py-32 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -447,21 +490,37 @@ const GTMServices = () => {
             </p>
           </div>
 
-          {/* Problem-Solution FAQs */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold mb-8 text-center">Common Tracking Problems We Solve</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {problemSolutionFAQs.map((faq, index) => (
-                <div key={index} className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
-                  <h4 className="font-semibold text-gray-900 mb-3">{faq.question}</h4>
-                  <p className="text-gray-600">{faq.solution}</p>
-                </div>
-              ))}
+          {/* Two Column Layout - Problem-Solution FAQs and General FAQs */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            {/* Left Column - Common Tracking Problems We Solve */}
+            <div>
+              <h3 className="text-2xl font-bold mb-8">Common Tracking Problems We Solve</h3>
+              <div className="space-y-6">
+                {problemSolutionFAQs.map((faq, index) => (
+                  <div key={index} className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
+                    <h4 className="font-semibold text-gray-900 mb-3">{faq.question}</h4>
+                    <p className="text-gray-600">{faq.solution}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right Column - Your Questions Answered */}
+            <div>
+              <h3 className="text-2xl font-bold mb-8">Your Questions Answered</h3>
+              <div className="space-y-6">
+                {generalFAQs.map((faq, index) => (
+                  <div key={index} className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
+                    <h4 className="font-semibold text-gray-900 mb-3">{faq.question}</h4>
+                    <p className="text-gray-600">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* 3 Effective Fixes */}
-          <div className="mb-16">
+          {/* The 3 Fixes That Make the Biggest Impact - Below FAQs */}
+          <div>
             <h3 className="text-2xl font-bold mb-8 text-center">The 3 Fixes That Make the Biggest Impact</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {effectiveFixes.map((fix, index) => (
@@ -474,16 +533,28 @@ const GTMServices = () => {
             </div>
           </div>
 
-          {/* General FAQs */}
-          <div>
-            <h3 className="text-2xl font-bold mb-8 text-center">Your Questions Answered</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {generalFAQs.map((faq, index) => (
-                <div key={index} className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
-                  <h4 className="font-semibold text-gray-900 mb-3">{faq.question}</h4>
-                  <p className="text-gray-600">{faq.answer}</p>
-                </div>
-              ))}
+          {/* Side Images for "3 Fixes" - Layout from Design */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
+            <div className="aspect-video rounded-lg overflow-hidden">
+              <img 
+                src={analyticsImage} 
+                alt="Support team working"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="aspect-video rounded-lg overflow-hidden">
+              <img 
+                src={visualizationImage} 
+                alt="Analytics dashboard"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="aspect-video rounded-lg overflow-hidden">
+              <img 
+                src={teamImage} 
+                alt="Team collaboration"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
