@@ -30,6 +30,7 @@ import visualizationImage from "@/assets/visualization-reporting.jpg";
 import customWorkspaceBg from "@/assets/custom-workspace-bg.jpg";
 import wastedTimeImage from "@/assets/wasted-time-image.jpg";
 import complianceRiskImage from "@/assets/compliance-risk-image.jpg";
+import trackingFrustrationBg from "@/assets/tracking-frustration-bg.jpg";
 const GTMServices = () => {
   const painPoints = [
     "Is your tracking data inconsistent or missing?",
@@ -347,7 +348,7 @@ const GTMServices = () => {
             {/* Right side image with testimonial overlay */}
             <div className="relative">
               <img 
-                src="/lovable-uploads/8bf7f4e6-3ae3-4c97-a5fb-e36d7527262d.png" 
+                src={trackingFrustrationBg} 
                 alt="Frustrated person with analytics problems"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
