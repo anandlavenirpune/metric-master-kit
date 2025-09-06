@@ -933,6 +933,22 @@ const GTMServices = () => {
         </div>
       </section>
 
+      {/* Ready to Fix Your Tracking CTA Section */}
+      <section className="py-20 lg:py-32 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="bg-white rounded-2xl p-12 shadow-sm">
+            <h2 className="heading-section mb-6">Ready to Fix Your Tracking?</h2>
+            <p className="text-description text-xl mb-8 max-w-2xl mx-auto">
+              Join hundreds of businesses who've transformed their data quality with our proven process.
+            </p>
+            <Button className="btn-hero text-lg px-8 py-4">
+              Start Your Project
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us Section */}
       <section className="py-20 lg:py-32 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
