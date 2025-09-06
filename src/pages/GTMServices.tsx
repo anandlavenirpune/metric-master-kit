@@ -1154,11 +1154,11 @@ const GTMServices = () => {
             {/* Left Column - Common Tracking Problems We Solve */}
             <div>
               <h3 className="heading-card mb-8">Common Tracking Problems We Solve</h3>
-              <div className="space-y-6">
+              <div className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm space-y-6">
                 {problemSolutionFAQs.map((faq, index) => (
-                  <div key={index} className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
+                  <div key={index}>
                     <h4 className="font-semibold text-gray-900 mb-3">{faq.question}</h4>
-                    <p className="text-gray-600">{faq.solution}</p>
+                    <p className="text-gray-600 mb-6 last:mb-0">{faq.solution}</p>
                   </div>
                 ))}
               </div>
