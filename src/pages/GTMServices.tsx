@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { 
   Settings, 
   Shield, 
@@ -1166,13 +1167,19 @@ const GTMServices = () => {
             {/* Right Column - Your Questions Answered */}
             <div>
               <h3 className="heading-card mb-8">Your Questions Answered</h3>
-              <div className="space-y-6">
-                {generalFAQs.map((faq, index) => (
-                  <div key={index} className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
-                    <h4 className="font-semibold text-gray-900 mb-3">{faq.question}</h4>
-                    <p className="text-gray-600">{faq.answer}</p>
-                  </div>
-                ))}
+              <div className="bg-white rounded-lg border border-gray-200 shadow-sm">
+                <Accordion type="single" collapsible className="w-full">
+                  {generalFAQs.map((faq, index) => (
+                    <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray-200 last:border-b-0">
+                      <AccordionTrigger className="px-6 py-4 text-left font-semibold text-gray-900 hover:no-underline hover:bg-gray-50">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="px-6 pb-4 text-gray-600">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
               </div>
             </div>
           </div>
