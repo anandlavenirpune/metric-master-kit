@@ -396,12 +396,12 @@ const GTMServices = () => {
           {/* Bottom Row - 3 Service Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Server-Side GTM */}
-            <div className="bg-blue-50 rounded-lg p-8">
-              <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
+            <div className="bg-slate-100 rounded-lg p-8">
+              <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-6">
                 <Database className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Server-Side GTM</h3>
-              <p className="text-gray-700 mb-4">Advanced privacy-first tracking with server-side implementations on GCP/AWS.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Server-Side GTM</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">Advanced privacy-first tracking with server-side implementations on GCP/AWS.</p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li>• Meta CAPI setup</li>
                 <li>• Google Ads Enhanced Conversions</li>
@@ -410,12 +410,12 @@ const GTMServices = () => {
             </div>
 
             {/* Custom Event Tracking */}
-            <div className="bg-purple-50 rounded-lg p-8">
-              <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
-                <Target className="h-6 w-6 text-white" />
+            <div className="bg-purple-100 rounded-lg p-8">
+              <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-6">
+                <TrendingUp className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Custom Event Tracking</h3>
-              <p className="text-gray-700 mb-4">Track every user interaction that matters to your business.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Custom Event Tracking</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">Track every user interaction that matters to your business.</p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li>• Forms, clicks, video views</li>
                 <li>• Enhanced Ecommerce tracking</li>
@@ -424,12 +424,12 @@ const GTMServices = () => {
             </div>
 
             {/* Privacy & Compliance */}
-            <div className="bg-green-50 rounded-lg p-8">
-              <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
+            <div className="bg-green-100 rounded-lg p-8">
+              <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-6">
                 <Shield className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Privacy & Compliance</h3>
-              <p className="text-gray-700 mb-4">Stay compliant with global privacy regulations.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Privacy & Compliance</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">Stay compliant with global privacy regulations.</p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li>• Consent Mode v2 setup</li>
                 <li>• CMP integration</li>
