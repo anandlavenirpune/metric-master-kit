@@ -1154,7 +1154,7 @@ const GTMServices = () => {
             {/* Left Column - Common Tracking Problems We Solve */}
             <div>
               <h3 className="heading-card mb-8">Common Tracking Problems We Solve</h3>
-              <div className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm space-y-6">
+              <div className="bg-muted/30 rounded-lg border border-gray-200 p-6 shadow-sm space-y-6">
                 {problemSolutionFAQs.map((faq, index) => (
                   <div key={index}>
                     <h4 className="font-semibold text-gray-900 mb-3">{faq.question}</h4>
