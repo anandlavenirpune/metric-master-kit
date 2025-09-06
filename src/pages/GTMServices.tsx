@@ -24,7 +24,7 @@ import {
   X
 } from "lucide-react";
 import heroImage from "@/assets/hero-analytics.jpg";
-import teamImage from "@/assets/team-analytics.jpg";
+import teamAnalytics from "@/assets/team-analytics.jpg";
 import analyticsImage from "@/assets/analytics-tracking.jpg";
 import visualizationImage from "@/assets/visualization-reporting.jpg";
 import customWorkspaceBg from "@/assets/custom-workspace-bg.jpg";
@@ -130,6 +130,71 @@ const GTMServices = () => {
     }
   ];
 
+  const whyChooseMainFeatures = [
+    {
+      title: "Certified GTM/GA4 Specialists",
+      description: "Our team holds official Google certifications and stays current with platform updates.",
+      icon: <CheckCircle2 className="h-6 w-6 text-blue-600" />,
+      bgColor: "bg-blue-100"
+    },
+    {
+      title: "Performance-First Approach",
+      description: "Optimized tags that load fast, with zero impact on your site speed or user experience.",
+      icon: <Zap className="h-6 w-6 text-green-600" />,
+      bgColor: "bg-green-100"
+    },
+    {
+      title: "Privacy-Ready Tracking",
+      description: "Future-proof implementations ready for cookieless tracking and privacy regulations.",
+      icon: <Shield className="h-6 w-6 text-purple-600" />,
+      bgColor: "bg-purple-100"
+    }
+  ];
+
+  const stats = [
+    {
+      number: "500+",
+      label: "GTM Implementations",
+      color: "text-blue-600"
+    },
+    {
+      number: "98%",
+      label: "Client Satisfaction",
+      color: "text-green-600"
+    },
+    {
+      number: "50+",
+      label: "Certified Specialists",
+      color: "text-purple-600"
+    },
+    {
+      number: "24h",
+      label: "Average Response Time",
+      color: "text-orange-600"
+    }
+  ];
+
+  const additionalFeatures = [
+    {
+      title: "Documentation & Governance",
+      description: "Complete documentation and governance frameworks included with every project.",
+      icon: <FileText className="h-6 w-6 text-orange-600" />,
+      bgColor: "bg-orange-100"
+    },
+    {
+      title: "E-commerce & SaaS Experience",
+      description: "Deep expertise with Shopify, WooCommerce, Magento, and B2B SaaS tracking needs.",
+      icon: <Database className="h-6 w-6 text-red-600" />,
+      bgColor: "bg-red-100"
+    },
+    {
+      title: "White-Label Services",
+      description: "Partner with us for white-label GTM management services for your agency clients.",
+      icon: <Users className="h-6 w-6 text-indigo-600" />,
+      bgColor: "bg-indigo-100"
+    }
+  ];
+
   const whyChooseUs = [
     {
       title: "Certified GTM/GA4 specialists",
@@ -167,7 +232,7 @@ const GTMServices = () => {
     {
       title: "Agencies",
       description: "White-label GTM management services",
-      image: teamImage
+      image: teamAnalytics
     },
     {
       title: "Finance & Education",
@@ -949,35 +1014,84 @@ const GTMServices = () => {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-20 lg:py-32 bg-muted/30">
+      {/* Why Choose Our GTM Specialists Section */}
+      <section className="py-20 lg:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="heading-section mb-6">Why Choose Us</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Expert GTM specialists with proven results
+            <h2 className="heading-section mb-6">Why Choose Our GTM Specialists?</h2>
+            <p className="text-description text-gray-600 max-w-4xl mx-auto">
+              Certified experts who deliver performance-first, privacy-ready tracking solutions.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {whyChooseUs.map((reason, index) => (
-              <div key={index} className="bg-white rounded-lg border border-gray-200 p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center" style={{
-                    backgroundColor: index === 0 ? '#e0e7ff' : 
-                                   index === 1 ? '#ecfdf5' : 
-                                   index === 2 ? '#fed7aa' : 
-                                   '#f3e8ff'
-                  }}>
-                    {reason.icon}
+          {/* Main Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+            {/* Team Image */}
+            <div className="order-2 lg:order-1">
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src={teamAnalytics}
+                  alt="GTM Team Analytics Specialists"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+            
+            {/* Feature Cards */}
+            <div className="order-1 lg:order-2 space-y-6">
+              {whyChooseMainFeatures.map((feature, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <div className={`flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center ${feature.bgColor}`}>
+                    {feature.icon}
                   </div>
                   <div>
-                    <h3 className="heading-card text-xl text-gray-900">{reason.title}</h3>
-                    <p className="text-gray-600">{reason.description}</p>
+                    <h3 className="heading-card mb-2">{feature.title}</h3>
+                    <p className="text-description-small text-gray-600">{feature.description}</p>
                   </div>
                 </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Statistics Section */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className={`text-4xl lg:text-5xl font-bold mb-2 ${stat.color}`}>
+                  {stat.number}
+                </div>
+                <p className="text-description-small text-gray-600">{stat.label}</p>
               </div>
             ))}
+          </div>
+
+          {/* Additional Features Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Feature Cards */}
+            <div className="space-y-8">
+              {additionalFeatures.map((feature, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <div className={`flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center ${feature.bgColor}`}>
+                    {feature.icon}
+                  </div>
+                  <div>
+                    <h3 className="heading-card mb-2">{feature.title}</h3>
+                    <p className="text-description-small text-gray-600">{feature.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            {/* Team Image 2 */}
+            <div>
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src={teamAnalytics}
+                  alt="GTM Team Working"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1095,7 +1209,7 @@ const GTMServices = () => {
             </div>
             <div className="aspect-video rounded-lg overflow-hidden">
               <img 
-                src={teamImage} 
+                src={teamAnalytics} 
                 alt="Team collaboration"
                 className="w-full h-full object-cover"
               />
