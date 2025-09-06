@@ -33,6 +33,7 @@ import complianceRiskImage from "@/assets/compliance-risk-image.jpg";
 import trackingFrustrationBg from "@/assets/tracking-frustration-bg.jpg";
 import workspaceSetupBg from "@/assets/workspace-setup-bg.jpg";
 import consultationSetupBg from "@/assets/consultation-setup-bg.jpg";
+import customPackageBg from "@/assets/custom-package-bg.jpg";
 const GTMServices = () => {
   const painPoints = [
     "Is your tracking data inconsistent or missing?",
@@ -748,17 +749,18 @@ const GTMServices = () => {
           {/* Bottom two cards */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Need a Custom Package? */}
-            <div className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <img 
-                src={workspaceSetupBg} 
-                alt="Custom workspace setup"
-                className="w-full h-64 object-cover"
-              />
-              <div className="absolute inset-0 bg-black/50"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                <h3 className="text-2xl font-bold mb-4">Need a Custom Package?</h3>
-                <p className="text-white/90 mb-6">We can mix and match services to fit your exact requirements.</p>
-                <a href="#" className="text-blue-400 hover:text-blue-300 font-semibold transition-colors">
+            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+              <div className="p-8">
+                <div className="mb-6">
+                  <img 
+                    src={customPackageBg} 
+                    alt="Custom package workspace"
+                    className="w-full h-48 object-cover rounded-lg"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Need a Custom Package?</h3>
+                <p className="text-gray-600 mb-6">We can mix and match services to fit your exact requirements.</p>
+                <a href="#" className="text-blue-600 hover:text-blue-700 font-semibold transition-colors">
                   Build Your Package →
                 </a>
               </div>
