@@ -26,6 +26,7 @@ import heroImage from "@/assets/hero-analytics.jpg";
 import teamImage from "@/assets/team-analytics.jpg";
 import analyticsImage from "@/assets/analytics-tracking.jpg";
 import visualizationImage from "@/assets/visualization-reporting.jpg";
+import customWorkspaceBg from "@/assets/custom-workspace-bg.jpg";
 const GTMServices = () => {
   const painPoints = [
     "Is your tracking data inconsistent or missing?",
@@ -447,7 +448,7 @@ const GTMServices = () => {
             <div className="bg-gray-900 rounded-3xl overflow-hidden relative">
               <div className="absolute inset-0">
                 <img 
-                  src="/lovable-uploads/f745b02a-6f2a-418e-b596-043a21f393ac.png" 
+                  src={customWorkspaceBg} 
                   alt="Custom workspace background"
                   className="w-full h-full object-cover"
                 />
