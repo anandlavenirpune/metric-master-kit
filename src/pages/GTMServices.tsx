@@ -39,6 +39,7 @@ import processAuditBg from "@/assets/process-audit-bg.jpg";
 import processImplementationBg from "@/assets/process-implementation-bg.jpg";
 import processTestingBg from "@/assets/process-testing-bg.jpg";
 import processDocumentationBg from "@/assets/process-documentation-bg.jpg";
+import dataBackground from "@/assets/data-background.jpg";
 const GTMServices = () => {
   const painPoints = [
     "Is your tracking data inconsistent or missing?",
@@ -261,17 +262,20 @@ const GTMServices = () => {
     {
       title: "GA4 '(not set)' errors solved",
       description: "Fixed through proper tag sequencing and data layer validation",
-      icon: <Target className="h-8 w-8 text-green-500" />
+      icon: <Target className="h-8 w-8 text-green-500" />,
+      image: analyticsImage
     },
     {
       title: "Ecommerce tracking accuracy restored", 
       description: "Case example: 70% error reduction through audit and cleanup",
-      icon: <TrendingUp className="h-8 w-8 text-blue-500" />
+      icon: <TrendingUp className="h-8 w-8 text-blue-500" />,
+      image: dataBackground
     },
     {
       title: "Consent Mode v2 implemented",
       description: "Zero conversion loss with proper implementation workflow",
-      icon: <Shield className="h-8 w-8 text-purple-500" />
+      icon: <Shield className="h-8 w-8 text-purple-500" />,
+      image: complianceRiskImage
     }
   ];
 
@@ -1189,10 +1193,19 @@ const GTMServices = () => {
             <h3 className="heading-card mb-8 text-center">The 3 Fixes That Make the Biggest Impact</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {effectiveFixes.map((fix, index) => (
-                <div key={index} className="bg-white rounded-lg border border-gray-200 p-8 shadow-sm text-center">
-                  <div className="mb-4 flex justify-center">{fix.icon}</div>
-                  <h4 className="font-semibold text-gray-900 mb-3">{fix.title}</h4>
-                  <p className="text-gray-600">{fix.description}</p>
+                <div key={index} className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+                  <div className="p-6 text-center">
+                    <div className="mb-4 flex justify-center">{fix.icon}</div>
+                    <h4 className="font-semibold text-gray-900 mb-3">{fix.title}</h4>
+                    <p className="text-gray-600 mb-4">{fix.description}</p>
+                  </div>
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src={fix.image} 
+                      alt={fix.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
               ))}
             </div>
