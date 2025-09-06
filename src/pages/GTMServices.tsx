@@ -440,6 +440,27 @@ const GTMServices = () => {
         </div>
       </section>
 
+      {/* Need Something Custom Section */}
+      <section className="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="/lovable-uploads/267e79eb-f5fc-4595-a1df-b98389aba42a.png" 
+            alt="Custom workspace background"
+            className="w-full h-full object-cover opacity-50"
+          />
+          <div className="absolute inset-0 bg-gray-900/70"></div>
+        </div>
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Need Something Custom?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            We offer training workshops and complete documentation handovers for your internal teams.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+            Discuss Your Project
+          </button>
+        </div>
+      </section>
+
       {/* Packages Section */}
       <section className="py-20 lg:py-32 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
