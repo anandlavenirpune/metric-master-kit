@@ -18,6 +18,7 @@ import {
   Lock,
   GraduationCap,
   BarChart3,
+  Check,
   AlertTriangle,
   Search,
   FileText,
@@ -223,23 +224,43 @@ const GTMServices = () => {
   const useCases = [
     {
       title: "E-commerce brands",
-      description: "Shopify, WooCommerce, Magento tracking",
-      image: analyticsImage
+      description: "Complete tracking for Shopify, WooCommerce, and Magento stores.",
+      image: analyticsImage,
+      features: [
+        "Enhanced ecommerce tracking",
+        "Product performance analytics", 
+        "Attribution & ROAS optimization"
+      ]
     },
     {
       title: "B2B & SaaS",
-      description: "Lead form tracking, LinkedIn Ads integration",
-      image: visualizationImage
+      description: "Lead tracking and attribution for software companies.",
+      image: visualizationImage,
+      features: [
+        "Lead form tracking",
+        "LinkedIn Ads attribution",
+        "CRM integration"
+      ]
     },
     {
       title: "Agencies",
-      description: "White-label GTM management services",
-      image: teamAnalytics
+      description: "White-label GTM management services.",
+      image: teamAnalytics,
+      features: [
+        "Multi-client dashboard",
+        "Branded reporting",
+        "Scalable solutions"
+      ]
     },
     {
       title: "Finance & Education",
-      description: "High-compliance tracking setups",
-      image: analyticsImage
+      description: "High-compliance tracking setups.",
+      image: analyticsImage,
+      features: [
+        "GDPR compliance",
+        "Data privacy controls",
+        "Audit trail reporting"
+      ]
     }
   ];
 
@@ -1101,8 +1122,8 @@ const GTMServices = () => {
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 lg:py-32">
+      {/* Industries We Support Section */}
+      <section className="py-20 lg:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="heading-section mb-6">Industries We Support</h2>
@@ -1113,16 +1134,25 @@ const GTMServices = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
-              <div key={index} className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 aspect-[4/3]">
-                <img 
-                  src={useCase.image} 
-                  alt={`${useCase.title} industry`}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black/60"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-lg font-semibold mb-2">{useCase.title}</h3>
-                  <p className="text-white/90 text-sm">{useCase.description}</p>
+              <div key={index} className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={useCase.image} 
+                    alt={`${useCase.title} industry`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{useCase.title}</h3>
+                  <p className="text-gray-600 mb-4">{useCase.description}</p>
+                  <ul className="space-y-2">
+                    {useCase.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">
+                        <Check className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
