@@ -1241,30 +1241,6 @@ const GTMServices = () => {
             </div>
           </div>
 
-          {/* Side Images for "3 Fixes" - Layout from Design */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
-            <div className="aspect-video rounded-lg overflow-hidden">
-              <img 
-                src={analyticsImage} 
-                alt="Support team working"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="aspect-video rounded-lg overflow-hidden">
-              <img 
-                src={visualizationImage} 
-                alt="Analytics dashboard"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="aspect-video rounded-lg overflow-hidden">
-              <img 
-                src={teamAnalytics} 
-                alt="Team collaboration"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
