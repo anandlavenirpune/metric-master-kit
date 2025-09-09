@@ -41,6 +41,10 @@ import processImplementationBg from "@/assets/process-implementation-bg.jpg";
 import processTestingBg from "@/assets/process-testing-bg.jpg";
 import processDocumentationBg from "@/assets/process-documentation-bg.jpg";
 import dataBackground from "@/assets/data-background.jpg";
+import caseStudyEcommerce from "@/assets/case-study-ecommerce.jpg";
+import caseStudySaas from "@/assets/case-study-saas.jpg";
+import caseStudyHealthcare from "@/assets/case-study-healthcare.jpg";
+import caseStudyFinance from "@/assets/case-study-finance.jpg";
 const GTMServices = () => {
   const painPoints = [
     "Is your tracking data inconsistent or missing?",
@@ -320,6 +324,33 @@ const GTMServices = () => {
     {
       question: "Can you work with TikTok, LinkedIn, and other third-party tags?",
       answer: "Yes, we support all major advertising and analytics platforms."
+    }
+  ];
+
+  const caseStudies = [
+    {
+      title: "E-commerce Giant Increases ROAS by 45%",
+      description: "A major online retailer was losing millions in ad spend due to incomplete conversion tracking. Our comprehensive GTM audit revealed 12 critical issues including duplicate transactions, missing enhanced ecommerce events, and improper attribution modeling. After implementing our solution with server-side GTM and advanced conversion tracking, they achieved a 45% increase in ROAS and gained complete visibility into their customer journey across all touchpoints.",
+      image: caseStudyEcommerce,
+      results: ["45% increase in ROAS", "99.8% data accuracy", "50% faster site loading"]
+    },
+    {
+      title: "SaaS Startup Scales Lead Attribution",
+      description: "A B2B SaaS company was struggling to track leads across multiple channels including LinkedIn ads, Google ads, and organic search. Their marketing team couldn't attribute conversions properly, leading to budget misallocation. We implemented a sophisticated attribution model with custom events, CRM integration, and advanced audience building. The result was crystal-clear lead attribution and 60% improvement in lead quality scoring.",
+      image: caseStudySaas,
+      results: ["60% better lead quality", "100% attribution clarity", "30% cost reduction"]
+    },
+    {
+      title: "Healthcare Provider Achieves HIPAA Compliance",
+      description: "A healthcare network needed to track patient interactions while maintaining strict HIPAA compliance. We designed a privacy-first tracking solution using server-side GTM, consent management, and anonymized patient journey mapping. The implementation allowed them to optimize their patient acquisition funnel while exceeding all privacy requirements and reducing compliance risks to zero.",
+      image: caseStudyHealthcare,
+      results: ["100% HIPAA compliance", "Zero privacy violations", "35% more patients"]
+    },
+    {
+      title: "Financial Services Navigates Privacy Regulations",
+      description: "A fintech company faced challenges with strict financial data regulations while needing robust conversion tracking for their loan application process. Our team implemented a compliant tracking system with enhanced consent management, server-side processing, and real-time compliance monitoring. They now track every stage of their funnel while maintaining perfect regulatory compliance across all jurisdictions.",
+      image: caseStudyFinance,
+      results: ["Perfect compliance score", "90% funnel visibility", "25% conversion increase"]
     }
   ];
 
@@ -878,6 +909,46 @@ const GTMServices = () => {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies Section */}
+      <section className="py-20 lg:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="heading-section mb-6">Client Success Stories</h2>
+            <p className="text-description text-xl max-w-4xl mx-auto">
+              See how we've helped businesses across industries achieve perfect tracking and maximize their marketing ROI.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {caseStudies.map((study, index) => (
+              <Card key={index} className="service-card overflow-hidden">
+                <div className="aspect-w-16 aspect-h-9 mb-6">
+                  <img 
+                    src={study.image} 
+                    alt={study.title}
+                    className="w-full h-48 object-cover rounded-lg"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="heading-card mb-4">{study.title}</h3>
+                  <p className="text-description mb-6 leading-relaxed">
+                    {study.description}
+                  </p>
+                  <div className="space-y-2">
+                    {study.results.map((result, idx) => (
+                      <div key={idx} className="flex items-center space-x-2">
+                        <CheckCircle2 className="h-4 w-4 text-green-500 flex-shrink-0" />
+                        <span className="text-sm font-medium text-green-700">{result}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
