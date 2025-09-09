@@ -437,7 +437,7 @@ const GTMServices = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
                 Google Tag Manager Services
                 <br />
                 <span className="text-accent">for Accurate, Scalable Tracking</span>
@@ -753,7 +753,7 @@ const GTMServices = () => {
                 <div className="absolute inset-0 bg-black/40"></div>
               </div>
               <div className="relative px-8 py-20 md:px-16 md:py-24 text-center text-white z-10">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">Need Something Custom?</h2>
+                <h2 className="text-5xl md:text-6xl font-bold mb-6">Need Something Custom?</h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                   We offer training workshops and complete documentation handovers for your internal teams.
                 </p>
@@ -770,7 +770,7 @@ const GTMServices = () => {
       <section className="py-20 lg:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Packages</h2>
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">Packages</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Choose the perfect GTM solution for your business needs and budget.
             </p>
@@ -952,7 +952,7 @@ const GTMServices = () => {
                     className="w-full h-48 object-cover rounded-lg"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Need a Custom Package?</h3>
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">Need a Custom Package?</h3>
                 <p className="text-gray-600 mb-6">We can mix and match services to fit your exact requirements.</p>
                 <a href="#" className="text-blue-600 hover:text-blue-700 font-semibold transition-colors">
                   Build Your Package →
@@ -970,7 +970,7 @@ const GTMServices = () => {
                     className="w-full h-48 object-cover rounded-lg"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Questions About Pricing?</h3>
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">Questions About Pricing?</h3>
                 <p className="text-gray-600 mb-6">Schedule a free consultation to discuss your specific needs.</p>
                 <a href="#" className="text-blue-600 hover:text-blue-700 font-semibold transition-colors">
                   Book Free Consultation →
@@ -1029,7 +1029,7 @@ const GTMServices = () => {
       <section className="py-20 lg:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our 5-Step Process</h2>
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">Our 5-Step Process</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               From initial audit to ongoing optimization, we ensure your tracking is flawless.
             </p>
@@ -1053,7 +1053,7 @@ const GTMServices = () => {
                     1
                   </div>
                   <div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-4">Audit & Consultation</h3>
+                    <h3 className="text-4xl font-bold text-gray-900 mb-4">Audit & Consultation</h3>
                     <p className="text-lg text-gray-600 leading-relaxed">
                       We thoroughly review your current tracking setup and identify all issues affecting data quality and site performance.
                     </p>
@@ -1070,7 +1070,7 @@ const GTMServices = () => {
                     2
                   </div>
                   <div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-4">Implementation</h3>
+                    <h3 className="text-4xl font-bold text-gray-900 mb-4">Implementation</h3>
                     <p className="text-lg text-gray-600 leading-relaxed">
                       Configure your containers, triggers, and tags with best practices for optimal performance and data accuracy.
                     </p>
@@ -1103,7 +1103,7 @@ const GTMServices = () => {
                     3
                   </div>
                   <div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-4">Testing & QA</h3>
+                    <h3 className="text-4xl font-bold text-gray-900 mb-4">Testing & QA</h3>
                     <p className="text-lg text-gray-600 leading-relaxed">
                       Rigorous validation across staging and production environments to ensure everything works perfectly before going live.
                     </p>
@@ -1120,7 +1120,7 @@ const GTMServices = () => {
                     4
                   </div>
                   <div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-4">Documentation & Training</h3>
+                    <h3 className="text-4xl font-bold text-gray-900 mb-4">Documentation & Training</h3>
                     <p className="text-lg text-gray-600 leading-relaxed">
                       Complete handover with full implementation documentation and team training sessions.
                     </p>
@@ -1132,7 +1132,7 @@ const GTMServices = () => {
                   <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <FileText className="h-12 w-12 text-blue-600" />
                   </div>
-                  <h4 className="text-2xl font-bold text-gray-900 mb-2">Documentation</h4>
+                  <h4 className="text-3xl font-bold text-gray-900 mb-2">Documentation</h4>
                   <p className="text-gray-600">Complete handover with implementation guides and best practices</p>
                 </div>
               </div>
@@ -1145,7 +1145,7 @@ const GTMServices = () => {
                   <div className="w-24 h-24 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
                     <TrendingUp className="h-12 w-12 text-white" />
                   </div>
-                  <h4 className="text-2xl font-bold mb-2">Ongoing Optimization</h4>
+                  <h4 className="text-3xl font-bold mb-2">Ongoing Optimization</h4>
                   <p className="text-blue-100">Continuous audits and updates to keep your tracking perfect</p>
                 </div>
               </div>
@@ -1155,7 +1155,7 @@ const GTMServices = () => {
                     5
                   </div>
                   <div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-4">Ongoing Optimization</h3>
+                    <h3 className="text-4xl font-bold text-gray-900 mb-4">Ongoing Optimization</h3>
                     <p className="text-lg text-gray-600 leading-relaxed">
                       Continuous monitoring and optimization to ensure your tracking stays accurate as your business evolves.
                     </p>
@@ -1318,7 +1318,7 @@ const GTMServices = () => {
       {/* Need a Custom Integration CTA */}
       <section className="py-16 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="heading-section text-2xl md:text-3xl mb-4">
+          <h2 className="heading-section text-4xl md:text-5xl mb-4">
             <a href="#custom-integration" className="hover:text-primary transition-colors" title="Link to this section">
               Need a Custom Integration?
             </a>
@@ -1478,7 +1478,7 @@ const GTMServices = () => {
       {/* Final CTA Section */}
       <section className="section-hero py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+          <h2 className="text-5xl md:text-7xl font-bold mb-6">
             Stop Guessing. <span className="text-accent">Start Tracking with GTM.</span>
           </h2>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed opacity-90">
