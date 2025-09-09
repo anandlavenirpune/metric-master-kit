@@ -23,8 +23,13 @@ import {
   Search,
   FileText,
   Clock,
-  X
+  X,
+  ChevronLeft,
+  ChevronRight,
+  Star,
+  Quote
 } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import heroImage from "@/assets/hero-analytics.jpg";
 import teamAnalytics from "@/assets/team-analytics.jpg";
 import analyticsImage from "@/assets/analytics-tracking.jpg";
@@ -354,6 +359,57 @@ const GTMServices = () => {
     }
   ];
 
+  const testimonials = [
+    {
+      name: "Sarah Chen",
+      role: "Head of Marketing",
+      company: "TechStart Inc.",
+      content: "Their GTM audit uncovered issues we didn't even know existed. Our conversion tracking accuracy improved by 85% and we finally have reliable data for decision making.",
+      rating: 5,
+      avatar: "/lovable-uploads/267e79eb-f5fc-4595-a1df-b98389aba42a.png"
+    },
+    {
+      name: "Michael Rodriguez",
+      role: "E-commerce Director",
+      company: "Fashion Forward",
+      content: "The server-side GTM implementation was flawless. Our site speed improved while tracking became more accurate. ROAS increased by 40% within the first month.",
+      rating: 5,
+      avatar: "/lovable-uploads/8bf7f4e6-3ae3-4c97-a5fb-e36d7527262d.png"
+    },
+    {
+      name: "Emma Thompson",
+      role: "Digital Marketing Manager",
+      company: "HealthCare Plus",
+      content: "Finally, HIPAA-compliant tracking that actually works! They delivered a solution that meets all our privacy requirements while providing the insights we need.",
+      rating: 5,
+      avatar: "/lovable-uploads/a39c6e16-9eb7-4b79-b0c5-d1816ad185de.png"
+    },
+    {
+      name: "David Park",
+      role: "Growth Lead",
+      company: "SaaS Solutions",
+      content: "The attribution model they built for us is incredible. We can now track every lead source accurately and optimize our marketing spend with confidence.",
+      rating: 5,
+      avatar: "/lovable-uploads/d03b1167-1e66-4265-a353-06b24147817c.png"
+    },
+    {
+      name: "Lisa Wang",
+      role: "Marketing Director",
+      company: "FinTech Pro",
+      content: "Their compliance expertise saved us from potential regulatory issues. The tracking setup is bulletproof and our conversion rates have never been better.",
+      rating: 5,
+      avatar: "/lovable-uploads/f745b02a-6f2a-418e-b596-043a21f393ac.png"
+    },
+    {
+      name: "James Wilson",
+      role: "Agency Owner",
+      company: "Digital Growth Co.",
+      content: "Their white-label GTM services have transformed our client offerings. Professional, reliable, and always delivered on time. Highly recommended!",
+      rating: 5,
+      avatar: "/lovable-uploads/267e79eb-f5fc-4595-a1df-b98389aba42a.png"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation Header */}
@@ -414,7 +470,11 @@ const GTMServices = () => {
       <section className="py-20 lg:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="heading-section mb-6 text-gray-900">Is Bad Tracking Costing You Money?</h2>
+            <h2 className="heading-section mb-6 text-gray-900">
+              <a href="#pain-points" className="hover:text-primary transition-colors" title="Link to this section">
+                Is Bad Tracking Costing You Money?
+              </a>
+            </h2>
             <p className="text-description text-xl max-w-4xl mx-auto text-gray-600">
               Most businesses lose 30% of their marketing insights due to broken GTM setups. Here are the common symptoms:
             </p>
@@ -549,7 +609,11 @@ const GTMServices = () => {
       <section className="py-20 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="heading-section mb-6">Our GTM Services</h2>
+            <h2 className="heading-section mb-6">
+              <a href="#gtm-services" className="hover:text-primary transition-colors" title="Link to this section">
+                Our GTM Services
+              </a>
+            </h2>
             <p className="text-description text-xl max-w-3xl mx-auto">
               Complete Google Tag Manager solutions from setup to advanced server-side implementations.
             </p>
@@ -827,7 +891,11 @@ const GTMServices = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             {/* Left side - What's Included */}
             <div>
-              <h3 className="heading-section text-gray-900 mb-8">What's Included in Every Package</h3>
+              <h2 className="heading-section text-gray-900 mb-8">
+                <a href="#whats-included" className="hover:text-primary transition-colors" title="Link to this section">
+                  What's Included in Every Package
+                </a>
+              </h2>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -917,7 +985,11 @@ const GTMServices = () => {
       <section className="py-20 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="heading-section mb-6">Client Success Stories</h2>
+            <h2 className="heading-section mb-6">
+              <a href="#case-studies" className="hover:text-primary transition-colors" title="Link to this section">
+                Client Success Stories
+              </a>
+            </h2>
             <p className="text-description text-xl max-w-4xl mx-auto">
               See how we've helped businesses across industries achieve perfect tracking and maximize their marketing ROI.
             </p>
@@ -1099,7 +1171,11 @@ const GTMServices = () => {
       <section className="py-20 lg:py-32 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-white rounded-2xl p-12 shadow-sm">
-            <h2 className="heading-section mb-6">Ready to Fix Your Tracking?</h2>
+            <h2 className="heading-section mb-6">
+              <a href="#ready-to-fix" className="hover:text-primary transition-colors" title="Link to this section">
+                Ready to Fix Your Tracking?
+              </a>
+            </h2>
             <p className="text-description text-xl mb-8 max-w-2xl mx-auto">
               Join hundreds of businesses who've transformed their data quality with our proven process.
             </p>
@@ -1115,7 +1191,11 @@ const GTMServices = () => {
       <section className="py-20 lg:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="heading-section mb-6">Why Choose Our GTM Specialists?</h2>
+            <h2 className="heading-section mb-6">
+              <a href="#gtm-specialists" className="hover:text-primary transition-colors" title="Link to this section">
+                Why Choose Our GTM Specialists?
+              </a>
+            </h2>
             <p className="text-description text-gray-600 max-w-4xl mx-auto">
               Certified experts who deliver performance-first, privacy-ready tracking solutions.
             </p>
@@ -1197,7 +1277,11 @@ const GTMServices = () => {
       <section className="py-20 lg:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="heading-section mb-6">Industries We Support</h2>
+            <h2 className="heading-section mb-6">
+              <a href="#industries" className="hover:text-primary transition-colors" title="Link to this section">
+                Industries We Support
+              </a>
+            </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Specialized GTM solutions for every industry vertical
             </p>
@@ -1234,7 +1318,11 @@ const GTMServices = () => {
       {/* Need a Custom Integration CTA */}
       <section className="py-16 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="heading-section text-2xl md:text-3xl mb-4">Need a Custom Integration?</h2>
+          <h2 className="heading-section text-2xl md:text-3xl mb-4">
+            <a href="#custom-integration" className="hover:text-primary transition-colors" title="Link to this section">
+              Need a Custom Integration?
+            </a>
+          </h2>
           <p className="text-lg mb-8 opacity-90">
             Our development team can build custom connectors for any platform or tool you use.
           </p>
@@ -1244,11 +1332,71 @@ const GTMServices = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-20 lg:py-32 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="heading-section mb-6">
+              <a href="#testimonials" className="hover:text-primary transition-colors" title="Link to this section">
+                What Our Clients Say
+              </a>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Trusted by marketing teams at leading companies worldwide
+            </p>
+          </div>
+          
+          <Carousel className="w-full max-w-6xl mx-auto">
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="h-full bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div className="p-6 flex flex-col h-full">
+                      <div className="flex items-center mb-4">
+                        <img 
+                          src={testimonial.avatar} 
+                          alt={testimonial.name}
+                          className="w-12 h-12 rounded-full object-cover mr-4"
+                        />
+                        <div className="flex-1">
+                          <h3 className="font-semibold text-gray-900">{testimonial.name}</h3>
+                          <p className="text-sm text-gray-600">{testimonial.role}</p>
+                          <p className="text-sm text-gray-500">{testimonial.company}</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex mb-4">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                      
+                      <div className="flex-1">
+                        <Quote className="h-6 w-6 text-gray-300 mb-2" />
+                        <p className="text-gray-700 italic leading-relaxed">
+                          "{testimonial.content}"
+                        </p>
+                      </div>
+                    </div>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
+        </div>
+      </section>
+
       {/* FAQs Section - Exact Layout from Design */}
       <section className="py-20 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="heading-section mb-6">FAQs</h2>
+            <h2 className="heading-section mb-6">
+              <a href="#faqs" className="hover:text-primary transition-colors" title="Link to this section">
+                FAQs
+              </a>
+            </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Answers to common questions about GTM implementation
             </p>
@@ -1258,11 +1406,15 @@ const GTMServices = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             {/* Left Column - Common Tracking Problems We Solve */}
             <div>
-              <h3 className="heading-card mb-8">Common Tracking Problems We Solve</h3>
+              <h2 className="heading-card mb-8">
+                <a href="#common-problems" className="hover:text-primary transition-colors" title="Link to this section">
+                  Common Tracking Problems We Solve
+                </a>
+              </h2>
               <div className="bg-white rounded-lg border border-gray-300 p-6 shadow-sm space-y-6">
                 {problemSolutionFAQs.map((faq, index) => (
                   <div key={index}>
-                    <h4 className="font-semibold text-gray-900 mb-3">{faq.question}</h4>
+                    <h2 className="font-semibold text-gray-900 mb-3">{faq.question}</h2>
                     <p className="text-gray-600 mb-6 last:mb-0">{faq.solution}</p>
                   </div>
                 ))}
@@ -1271,13 +1423,17 @@ const GTMServices = () => {
 
             {/* Right Column - Your Questions Answered */}
             <div>
-              <h3 className="heading-card mb-8">Your Questions Answered</h3>
+              <h2 className="heading-card mb-8">
+                <a href="#questions-answered" className="hover:text-primary transition-colors" title="Link to this section">
+                  Your Questions Answered
+                </a>
+              </h2>
               <div className="bg-white rounded-lg border border-gray-300 shadow-sm">
                 <Accordion type="single" collapsible className="w-full">
                   {generalFAQs.map((faq, index) => (
                     <AccordionItem key={index} value={`item-${index}`} className="border-b border-gray-200 last:border-b-0">
                       <AccordionTrigger className="px-6 py-4 text-left font-semibold text-gray-900 hover:no-underline hover:bg-gray-50">
-                        {faq.question}
+                        <h2 className="text-base font-semibold">{faq.question}</h2>
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-4 text-gray-600">
                         {faq.answer}
@@ -1291,7 +1447,11 @@ const GTMServices = () => {
 
           {/* The 3 Fixes That Make the Biggest Impact - Below FAQs */}
           <div>
-            <h3 className="heading-card mb-8 text-center">The 3 Fixes That Make the Biggest Impact</h3>
+            <h2 className="heading-card mb-8 text-center">
+              <a href="#biggest-impact" className="hover:text-primary transition-colors" title="Link to this section">
+                The 3 Fixes That Make the Biggest Impact
+              </a>
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {effectiveFixes.map((fix, index) => (
                 <div key={index} className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
