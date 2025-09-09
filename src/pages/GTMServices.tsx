@@ -437,12 +437,12 @@ const GTMServices = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Google Tag Manager Services
                 <br />
                 <span className="text-accent">for Accurate, Scalable Tracking</span>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 leading-relaxed opacity-90">
+              <p className="text-lg md:text-xl mb-8 leading-relaxed opacity-90">
                 We help businesses set up, audit, and optimize GTM so you capture the right data, improve marketing ROI, and stay privacy-compliant.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
