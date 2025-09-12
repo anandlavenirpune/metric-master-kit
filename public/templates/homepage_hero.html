@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}}</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="homepage-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-background" style="background-image: url({{hero_background_image}})"></div>
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="hero-main-title">
+                    {{main_headline}}
+                    <br>
+                    <span class="hero-accent-text">{{accent_headline}}</span>
+                </h1>
+                <p class="hero-subtitle">{{hero_description}}</p>
+                <div class="hero-cta">
+                    <a href="{{cta_link}}" class="btn btn-hero">
+                        {{cta_text}}
+                        <span class="btn-icon">{{cta_icon}}</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

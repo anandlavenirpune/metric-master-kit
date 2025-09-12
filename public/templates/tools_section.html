@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}}</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Tools Section -->
+    <section class="tools-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">{{section_title}}</h2>
+                <p class="section-subtitle">{{section_description}}</p>
+            </div>
+
+            <div class="tools-grid">
+                <!-- Loop through tool categories -->
+                <div class="tool-category-card">
+                    <div class="tool-image">
+                        <img src="{{category_image}}" alt="{{category_alt}}" class="category-img">
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="category-title">{{category_title}}</h3>
+                        <ul class="tool-list">
+                            <!-- Loop through tools -->
+                            <li class="tool-item">
+                                <span class="check-icon">{{check_icon}}</span>
+                                <span class="tool-name">{{tool_name}}</span>
+                            </li>
+                            <!-- End loop tools -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- End loop categories -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}}</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Industries Section -->
+    <section class="industries-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">{{section_title}}</h2>
+                <p class="section-subtitle">{{section_description}}</p>
+            </div>
+
+            <div class="industries-grid">
+                <!-- Loop through industries -->
+                <div class="industry-card">
+                    <img src="{{industry_image}}" alt="{{industry_alt}}" class="industry-img">
+                    <div class="industry-overlay"></div>
+                    <div class="industry-content">
+                        <h3 class="industry-title">{{industry_title}}</h3>
+                        <p class="industry-description">{{industry_description}}</p>
+                    </div>
+                </div>
+                <!-- End loop industries -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>

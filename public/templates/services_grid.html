@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}}</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">{{section_title}}</h2>
+                <p class="section-subtitle">{{section_description}}</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Loop through services -->
+                <div class="service-card">
+                    <div class="service-content">
+                        <h3 class="service-title">{{service_title}}</h3>
+                        <ul class="service-items">
+                            <!-- Loop through service items -->
+                            <li class="service-item">
+                                <div class="service-icon" style="background-color: {{icon_bg_color}}">
+                                    <span class="icon">{{item_icon}}</span>
+                                </div>
+                                <div class="service-item-content">
+                                    <h4 class="item-title">{{item_title}}</h4>
+                                    <p class="item-description">{{item_description}}</p>
+                                </div>
+                            </li>
+                            <!-- End loop service items -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- End loop services -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>
