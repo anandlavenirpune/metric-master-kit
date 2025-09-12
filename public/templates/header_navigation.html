@@ -9,18 +9,18 @@
 <body>
     <!-- Navigation Header -->
     <header class="header-nav">
-        <div class="container">
+        <div class="container nav-container">
             <div class="nav-wrapper">
                 <div class="brand">
                     <h1 class="brand-title">{{brand_name}}</h1>
                 </div>
                 <nav class="nav-menu">
-                    <a href="{{home_link}}" class="nav-link active">{{home_text}}</a>
-                    <a href="{{services_link}}" class="nav-link">{{services_text}}</a>
+                    <a href="{{home_link}}" class="nav-link {{home_active_class}}">{{home_text}}</a>
+                    <a href="{{services_link}}" class="nav-link {{services_active_class}}">{{services_text}}</a>
                 </nav>
                 <div class="mobile-menu">
                     <button class="mobile-btn">
-                        <span class="menu-icon"></span>
+                        <span class="menu-icon">☰</span>
                     </button>
                 </div>
             </div>

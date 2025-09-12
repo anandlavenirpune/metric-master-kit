@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}}</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faqs">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">
+                    <a href="#faqs" class="section-link">{{section_title}}</a>
+                </h2>
+                <p class="section-subtitle">{{section_description}}</p>
+            </div>
+
+            <div class="faq-grid">
+                <!-- Left Column - Problem-Solution FAQs -->
+                <div class="faq-column">
+                    <h3 class="faq-column-title">{{left_column_title}}</h3>
+                    <div class="faq-simple-list">
+                        <!-- Loop through problem-solution FAQs -->
+                        <div class="faq-simple-item">
+                            <h2 class="faq-question">{{question}}</h2>
+                            <p class="faq-solution">{{solution}}</p>
+                        </div>
+                        <!-- End loop problem-solution FAQs -->
+                    </div>
+                </div>
+
+                <!-- Right Column - Accordion FAQs -->
+                <div class="faq-column">
+                    <h3 class="faq-column-title">
+                        <a href="#questions-answered" class="section-link">{{right_column_title}}</a>
+                    </h3>
+                    <div class="faq-accordion">
+                        <!-- Loop through accordion FAQs -->
+                        <div class="faq-accordion-item">
+                            <button class="faq-accordion-trigger">
+                                <h2 class="faq-accordion-question">{{question}}</h2>
+                                <span class="faq-accordion-icon">+</span>
+                            </button>
+                            <div class="faq-accordion-content">
+                                <p>{{answer}}</p>
+                            </div>
+                        </div>
+                        <!-- End loop accordion FAQs -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
