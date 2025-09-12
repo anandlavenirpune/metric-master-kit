@@ -445,13 +445,28 @@ const GTMServices = () => {
               <p className="text-lg md:text-xl mb-8 leading-relaxed opacity-90">
                 We help businesses set up, audit, and optimize GTM so you capture the right data, improve marketing ROI, and stay privacy-compliant.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 <Button className="btn-hero text-lg">
                   Get a Free GTM Audit
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button variant="outline" className="text-lg border-white text-white hover:bg-white hover:text-primary">
                   Talk to a GTM Specialist
+                </Button>
+              </div>
+              <div className="flex justify-start">
+                <Button
+                  variant="secondary"
+                  size="sm"
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = '/gtm-services-content-template.csv';
+                    link.download = 'gtm-services-content-template.csv';
+                    link.click();
+                  }}
+                  className="text-sm px-4 py-2 bg-white/10 text-white border border-white/20 hover:bg-white/20"
+                >
+                  📥 Download Content Template (CSV)
                 </Button>
               </div>
             </div>

@@ -1,0 +1,142 @@
+Content,HTML Tag
+"Google Tag Manager Services for Accurate, Scalable Tracking",h1
+"We help businesses set up, audit, and optimize GTM so you capture the right data, improve marketing ROI, and stay privacy-compliant.",p
+"Get Free GTM Audit",button
+"Book Consultation",button
+"Marketing Analytics",h1
+"Is your tracking data inconsistent or missing?",p
+"Are your tags slowing down your site?",p
+"Struggling to manage multiple marketing pixels?",p
+"Unsure about compliance with consent/privacy laws?",p
+"No clear documentation or control of your GTM setup?",p
+"Our GTM Services",h2
+"GTM Setup & Container Organization",h3
+"Clean container structure, proper naming conventions, data layers. Migration from hard-coded tags to GTM.",p
+"GTM Audits & Optimizations",h3
+"Full audit of tags, triggers, and variables. Fix redundant/duplicate tags, improve speed.",p
+"Server-Side GTM (sGTM) & Advanced Tagging",h3
+"Setup on GCP/AWS. Meta CAPI, Google Ads Enhanced Conversions. Cookieless and privacy-ready tracking.",p
+"Custom Event & Ecommerce Tracking",h3
+"Track forms, clicks, videos, and custom events. Enhanced Ecommerce tracking (Shopify, Woo, Magento).",p
+"Privacy & Compliance Solutions",h3
+"Consent Mode v2 setup. CMP integration (Cookiebot, OneTrust, Didomi, Quantcast). Region-specific compliance.",p
+"Training & Documentation",h3
+"Workshops for internal teams. Full implementation documentation & handover.",p
+"Service Packages",h2
+"Starter",h3
+"Basic GTM setup + 10 events tracked",p
+"GTM container setup",li
+"10 custom events",li
+"Basic documentation",li
+"Email support",li
+"Starting at $2,500",p
+"Advanced",h3
+"Full audit, ecommerce, + compliance setup",p
+"Complete GTM audit",li
+"Ecommerce tracking",li
+"Consent Mode v2",li
+"Training session",li
+"30-day support",li
+"Starting at $5,000",p
+"Enterprise",h3
+"Multi-domain sGTM + custom training",p
+"Server-side GTM",li
+"Multi-domain setup",li
+"Custom training",li
+"Ongoing optimization",li
+"Priority support",li
+"Custom pricing",p
+"Why Choose Us",h2
+"Certified GTM/GA4 Specialists",h3
+"Our team holds official Google certifications and stays current with platform updates.",p
+"Performance-First Approach",h3
+"Optimized tags that load fast, with zero impact on your site speed or user experience.",p
+"Privacy-Ready Tracking",h3
+"Future-proof implementations ready for cookieless tracking and privacy regulations.",p
+"500+",span
+"GTM Implementations",span
+"98%",span
+"Client Satisfaction",span
+"50+",span
+"Certified Specialists",span
+"24h",span
+"Average Response Time",span
+"Our Process",h2
+"Audit & Consultation",h3
+"Review current setup and identify opportunities",p
+"Implementation",h3
+"Configure containers, triggers, and tags",p
+"Testing & QA",h3
+"Validate across staging/production",p
+"Documentation & Training",h3
+"Full handover + best practices",p
+"Ongoing Optimization",h3
+"Continuous audits + updates",p
+"Common Problems We Solve",h2
+"Why is GA4 showing '(not set)'?",h3
+"We fix this by adjusting firing order in GTM and validating data layers to ensure proper parameter collection.",p
+"Ecommerce tracking is inaccurate",h3
+"Our audit identifies duplicate transactions and implements proper data layer structure for 70% error reduction.",p
+"Consent Mode v2 without conversion loss",h3
+"We implement advanced conversion modeling to maintain performance while ensuring full privacy compliance.",p
+"Case Studies",h2
+"E-commerce Giant Increases ROAS by 45%",h3
+"A major online retailer was losing millions in ad spend due to incomplete conversion tracking. Our comprehensive GTM audit revealed 12 critical issues including duplicate transactions, missing enhanced ecommerce events, and improper attribution modeling. After implementing our solution with server-side GTM and advanced conversion tracking, they achieved a 45% increase in ROAS and gained complete visibility into their customer journey across all touchpoints.",p
+"45% increase in ROAS",li
+"99.8% data accuracy",li
+"50% faster site loading",li
+"SaaS Startup Scales Lead Attribution",h3
+"A B2B SaaS company was struggling to track leads across multiple channels including LinkedIn ads, Google ads, and organic search. Their marketing team couldn't attribute conversions properly, leading to budget misallocation. We implemented a sophisticated attribution model with custom events, CRM integration, and advanced audience building. The result was crystal-clear lead attribution and 60% improvement in lead quality scoring.",p
+"60% better lead quality",li
+"100% attribution clarity",li
+"30% cost reduction",li
+"Healthcare Provider Achieves HIPAA Compliance",h3
+"A healthcare network needed to track patient interactions while maintaining strict HIPAA compliance. We designed a privacy-first tracking solution using server-side GTM, consent management, and anonymized patient journey mapping. The implementation allowed them to optimize their patient acquisition funnel while exceeding all privacy requirements and reducing compliance risks to zero.",p
+"100% HIPAA compliance",li
+"Zero privacy violations",li
+"35% more patients",li
+"Financial Services Navigates Privacy Regulations",h3
+"A fintech company faced challenges with strict financial data regulations while needing robust conversion tracking for their loan application process. Our team implemented a compliant tracking system with enhanced consent management, server-side processing, and real-time compliance monitoring. They now track every stage of their funnel while maintaining perfect regulatory compliance across all jurisdictions.",p
+"Perfect compliance score",li
+"90% funnel visibility",li
+"25% conversion increase",li
+"What Our Clients Say",h2
+"Sarah Chen",h4
+"Head of Marketing",p
+"TechStart Inc.",p
+"Their GTM audit uncovered issues we didn't even know existed. Our conversion tracking accuracy improved by 85% and we finally have reliable data for decision making.",blockquote
+"Michael Rodriguez",h4
+"E-commerce Director",p
+"Fashion Forward",p
+"The server-side GTM implementation was flawless. Our site speed improved while tracking became more accurate. ROAS increased by 40% within the first month.",blockquote
+"Emma Thompson",h4
+"Digital Marketing Manager",p
+"HealthCare Plus",p
+"Finally, HIPAA-compliant tracking that actually works! They delivered a solution that meets all our privacy requirements while providing the insights we need.",blockquote
+"David Park",h4
+"Growth Lead",p
+"SaaS Solutions",p
+"The attribution model they built for us is incredible. We can now track every lead source accurately and optimize our marketing spend with confidence.",blockquote
+"Lisa Wang",h4
+"Marketing Director",p
+"FinTech Pro",p
+"Their compliance expertise saved us from potential regulatory issues. The tracking setup is bulletproof and our conversion rates have never been better.",blockquote
+"James Wilson",h4
+"Agency Owner",p
+"Digital Growth Co.",p
+"Their white-label GTM services have transformed our client offerings. Professional, reliable, and always delivered on time. Highly recommended!",blockquote
+"Frequently Asked Questions",h2
+"How long does GTM setup take?",h3
+"Typically 2-4 weeks depending on complexity and requirements.",p
+"Do I need server-side GTM?",h3
+"Recommended for high-traffic sites and enhanced privacy compliance.",p
+"Will GTM slow down my website?",h3
+"No, we optimize all implementations for zero performance impact.",p
+"What's included in a GTM audit?",h3
+"Complete review of tags, triggers, variables, and performance optimization.",p
+"Can you work with TikTok, LinkedIn, and other third-party tags?",h3
+"Yes, we support all major advertising and analytics platforms.",p
+"Ready to Get Started?",h2
+"Let's discuss your GTM needs and create a solution that works for your business.",p
+"Get Free GTM Audit",button
+"Book Consultation",button
