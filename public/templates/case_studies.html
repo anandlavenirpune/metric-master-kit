@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Case Studies Section -->
+    <section class="case-studies-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">{{section_title}}</h2>
+                <p class="section-description">{{section_description}}</p>
+            </div>
+            
+            <div class="case-studies-grid">
+                <!-- Case Study Card - Repeat this structure for each case study -->
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <img src="{{case_study_image}}" alt="{{case_study_image_alt}}" class="case-img">
+                    </div>
+                    <div class="case-study-content">
+                        <h3 class="case-study-title">{{case_study_title}}</h3>
+                        <p class="case-study-description">{{case_study_description}}</p>
+                        
+                        <div class="case-study-results">
+                            <h4 class="results-title">Results:</h4>
+                            <ul class="results-list">
+                                <!-- Result Item - Repeat for each result -->
+                                <li class="result-item">{{result_text}}</li>
+                                <!-- End Result Item -->
+                            </ul>
+                        </div>
+                        
+                        <a href="{{case_study_link}}" class="btn btn-outline">{{case_study_cta}}</a>
+                    </div>
+                </div>
+                <!-- End Case Study Card -->
+            </div>
+            
+            <!-- Testimonials -->
+            <div class="testimonials-section">
+                <h3 class="testimonials-title">{{testimonials_title}}</h3>
+                <div class="testimonials-grid">
+                    <!-- Testimonial Card - Repeat for each testimonial -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <!-- Star - Repeat for rating -->
+                            <span class="star">★</span>
+                            <!-- End Star -->
+                        </div>
+                        <p class="testimonial-content">{{testimonial_content}}</p>
+                        <div class="testimonial-author">
+                            <img src="{{author_avatar}}" alt="{{author_name}}" class="author-avatar">
+                            <div class="author-info">
+                                <h4 class="author-name">{{author_name}}</h4>
+                                <p class="author-role">{{author_role}}</p>
+                                <p class="author-company">{{author_company}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Testimonial Card -->
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

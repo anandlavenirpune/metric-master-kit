@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">{{section_title}}</h2>
+                <p class="section-description">{{section_description}}</p>
+            </div>
+            
+            <div class="process-timeline">
+                <!-- Process Step - Repeat this structure for each step -->
+                <div class="process-step">
+                    <div class="step-number">{{step_number}}</div>
+                    <div class="step-content">
+                        <h3 class="step-title">{{step_title}}</h3>
+                        <p class="step-description">{{step_description}}</p>
+                        <div class="step-image">
+                            <img src="{{step_image}}" alt="{{step_image_alt}}" class="step-img">
+                        </div>
+                        <ul class="step-features">
+                            <!-- Step Feature - Repeat for each feature -->
+                            <li class="step-feature">{{step_feature}}</li>
+                            <!-- End Step Feature -->
+                        </ul>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+                <!-- End Process Step -->
+            </div>
+            
+            <!-- Process CTA -->
+            <div class="process-cta">
+                <h3 class="process-cta-title">{{cta_title}}</h3>
+                <p class="process-cta-description">{{cta_description}}</p>
+                <a href="{{cta_link}}" class="btn btn-primary">{{cta_text}}</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pain Points</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pain Points Section -->
+    <section class="pain-points-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">{{section_title}}</h2>
+                <p class="section-description">{{section_description}}</p>
+            </div>
+            
+            <div class="pain-points-grid">
+                <!-- Pain Point Item - Repeat this structure for each pain point -->
+                <div class="pain-point-card">
+                    <div class="pain-point-icon">
+                        <img src="{{pain_point_icon}}" alt="{{pain_point_icon_alt}}" class="icon">
+                    </div>
+                    <h3 class="pain-point-title">{{pain_point_title}}</h3>
+                    <p class="pain-point-description">{{pain_point_description}}</p>
+                    <div class="pain-point-image">
+                        <img src="{{pain_point_image}}" alt="{{pain_point_image_alt}}" class="pain-img">
+                    </div>
+                </div>
+                <!-- End Pain Point Item -->
+            </div>
+            
+            <!-- Problem Solution -->
+            <div class="problem-solution">
+                <h3 class="problem-title">{{problem_title}}</h3>
+                <div class="solution-grid">
+                    <!-- Solution Item - Repeat for each solution -->
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <img src="{{solution_icon}}" alt="{{solution_icon_alt}}" class="icon">
+                        </div>
+                        <h4 class="solution-title">{{solution_title}}</h4>
+                        <p class="solution-description">{{solution_description}}</p>
+                    </div>
+                    <!-- End Solution Item -->
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

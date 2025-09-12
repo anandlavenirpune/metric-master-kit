@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact Cards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Impact Cards Section -->
+    <section class="impact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">{{section_title}}</h2>
+                <p class="section-description">{{section_description}}</p>
+            </div>
+            
+            <div class="impact-grid">
+                <!-- Impact Card - Repeat this structure for each impact -->
+                <div class="impact-card">
+                    <div class="impact-image">
+                        <img src="{{impact_image}}" alt="{{impact_image_alt}}" class="card-img">
+                    </div>
+                    <div class="impact-content">
+                        <div class="impact-icon">
+                            <img src="{{impact_icon}}" alt="{{impact_icon_alt}}" class="icon">
+                        </div>
+                        <h3 class="impact-title">{{impact_title}}</h3>
+                        <p class="impact-description">{{impact_description}}</p>
+                        <div class="impact-stats">
+                            <div class="stat">
+                                <span class="stat-number">{{stat_number}}</span>
+                                <span class="stat-label">{{stat_label}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Impact Card -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>

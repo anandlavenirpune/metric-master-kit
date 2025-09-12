@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Package CTA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom Package CTA Section -->
+    <section class="custom-package-section">
+        <div class="custom-package-overlay"></div>
+        <div class="container">
+            <div class="custom-package-content">
+                <h2 class="custom-package-title">{{cta_title}}</h2>
+                <p class="custom-package-description">{{cta_description}}</p>
+                
+                <div class="custom-package-features">
+                    <!-- Feature Item - Repeat for each feature -->
+                    <div class="custom-feature">
+                        <div class="custom-feature-icon">
+                            <img src="{{feature_icon}}" alt="{{feature_icon_alt}}" class="icon">
+                        </div>
+                        <span class="custom-feature-text">{{feature_text}}</span>
+                    </div>
+                    <!-- End Feature Item -->
+                </div>
+                
+                <div class="custom-package-cta">
+                    <a href="{{primary_cta_link}}" class="btn btn-primary">{{primary_cta_text}}</a>
+                    <a href="{{secondary_cta_link}}" class="btn btn-secondary">{{secondary_cta_text}}</a>
+                </div>
+                
+                <div class="custom-package-trust">
+                    <p class="trust-text">{{trust_text}}</p>
+                    <div class="trust-badges">
+                        <!-- Trust Badge - Repeat for each badge -->
+                        <div class="trust-badge">
+                            <img src="{{badge_icon}}" alt="{{badge_alt}}" class="badge-icon">
+                            <span class="badge-text">{{badge_text}}</span>
+                        </div>
+                        <!-- End Trust Badge -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

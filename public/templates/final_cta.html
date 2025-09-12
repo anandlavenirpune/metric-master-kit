@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final CTA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Final CTA Section -->
+    <section class="final-cta-section">
+        <div class="final-cta-overlay"></div>
+        <div class="container">
+            <div class="final-cta-content">
+                <h2 class="final-cta-title">{{cta_title}}</h2>
+                <p class="final-cta-description">{{cta_description}}</p>
+                
+                <div class="final-cta-features">
+                    <!-- Feature Item - Repeat for each feature -->
+                    <div class="final-feature">
+                        <div class="final-feature-icon">
+                            <img src="{{feature_icon}}" alt="{{feature_icon_alt}}" class="icon">
+                        </div>
+                        <div class="final-feature-content">
+                            <h4 class="final-feature-title">{{feature_title}}</h4>
+                            <p class="final-feature-description">{{feature_description}}</p>
+                        </div>
+                    </div>
+                    <!-- End Feature Item -->
+                </div>
+                
+                <div class="final-cta-buttons">
+                    <a href="{{primary_cta_link}}" class="btn btn-primary">{{primary_cta_text}}</a>
+                    <a href="{{secondary_cta_link}}" class="btn btn-secondary">{{secondary_cta_text}}</a>
+                </div>
+                
+                <div class="final-cta-guarantee">
+                    <div class="guarantee-icon">
+                        <img src="{{guarantee_icon}}" alt="{{guarantee_icon_alt}}" class="icon">
+                    </div>
+                    <p class="guarantee-text">{{guarantee_text}}</p>
+                </div>
+                
+                <!-- FAQ Section -->
+                <div class="faq-section">
+                    <h3 class="faq-title">{{faq_title}}</h3>
+                    <div class="faq-grid">
+                        <!-- FAQ Item - Repeat for each FAQ -->
+                        <div class="faq-item">
+                            <h4 class="faq-question">{{faq_question}}</h4>
+                            <p class="faq-answer">{{faq_answer}}</p>
+                        </div>
+                        <!-- End FAQ Item -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

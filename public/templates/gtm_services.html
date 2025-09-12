@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTM Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- GTM Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">{{section_title}}</h2>
+                <p class="section-description">{{section_description}}</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service Card - Repeat this structure for each service -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="{{service_icon}}" alt="{{service_icon_alt}}" class="icon">
+                    </div>
+                    <h3 class="service-title">{{service_title}}</h3>
+                    <p class="service-description">{{service_description}}</p>
+                    <ul class="service-features">
+                        <!-- Feature Item - Repeat for each feature -->
+                        <li class="feature-item">{{feature_text}}</li>
+                        <!-- End Feature Item -->
+                    </ul>
+                    <a href="{{service_cta_link}}" class="btn btn-outline">{{service_cta_text}}</a>
+                </div>
+                <!-- End Service Card -->
+            </div>
+            
+            <!-- Service Packages -->
+            <div class="packages-section">
+                <h3 class="packages-title">{{packages_title}}</h3>
+                <div class="packages-grid">
+                    <!-- Package Card - Repeat for each package -->
+                    <div class="package-card {{package_popular_class}}">
+                        <div class="package-header">
+                            <h4 class="package-name">{{package_name}}</h4>
+                            <p class="package-description">{{package_description}}</p>
+                            <div class="package-price">{{package_price}}</div>
+                        </div>
+                        <ul class="package-features">
+                            <!-- Package Feature - Repeat for each feature -->
+                            <li class="package-feature">{{package_feature}}</li>
+                            <!-- End Package Feature -->
+                        </ul>
+                        <a href="{{package_cta_link}}" class="btn btn-primary package-btn">{{package_cta_text}}</a>
+                    </div>
+                    <!-- End Package Card -->
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
