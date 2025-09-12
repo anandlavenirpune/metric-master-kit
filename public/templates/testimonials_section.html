@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}}</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">{{section_title}}</h2>
+                <p class="section-subtitle">{{section_description}}</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <!-- Loop through testimonials -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <span class="icon">{{quote_icon}}</span>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "{{testimonial_text}}"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="{{author_image}}" alt="{{author_alt}}" class="author-img">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">{{author_name}}</h4>
+                                <p class="author-title">{{author_title}}</p>
+                                <p class="author-company">{{author_company}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End loop testimonials -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>
