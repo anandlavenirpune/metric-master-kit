@@ -2698,22 +2698,23 @@ body {
 }
 
 .gtm-process-card {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.gtm-process-card > * {
-    flex: 1;
+.gtm-process-card.gtm-process-reverse {
+    direction: rtl;
 }
 
-/* Alternate layout: even cards (2nd, 4th) get reversed */
-.gtm-process-card:nth-child(2),
-.gtm-process-card:nth-child(4) {
-    flex-direction: row-reverse;
+.gtm-process-card.gtm-process-reverse > * {
+    direction: ltr;
 }
+
+.gtm-process-image {
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
@@ -2828,16 +2829,13 @@ body {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .gtm-process-card {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 40px;
         text-align: center;
     }
     
-    .gtm-process-card.gtm-process-reverse .gtm-process-content,
-    .gtm-process-card.gtm-process-reverse .gtm-process-image,
-    .gtm-process-card.gtm-process-reverse .gtm-process-icon-card,
-    .gtm-process-card.gtm-process-reverse .gtm-process-optimization-card {
-        order: initial;
+    .gtm-process-card.gtm-process-reverse {
+        direction: ltr;
     }
     
     .gtm-process-content {
