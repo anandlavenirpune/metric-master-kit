@@ -1422,9 +1422,28 @@ body {
         font-size: 36px;
     }
     
-    .gtm-process-grid {
+    .gtm-process-step,
+    .gtm-process-step.reverse {
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .gtm-process-step.reverse .gtm-step-content,
+    .gtm-process-step.reverse .gtm-step-image {
+        order: initial;
+    }
+    
+    .gtm-step-title {
+        font-size: 28px;
+    }
+    
+    .gtm-step-description {
+        font-size: 16px;
+    }
+    
+    .gtm-process-steps {
+        gap: 60px;
     }
     
     .gtm-process-step-alt {
