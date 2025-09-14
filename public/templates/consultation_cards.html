@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}}</title>
+    <link rel="stylesheet" href="gtm-exact-styles.css">
+</head>
+<body>
+    <!-- Consultation Cards Section -->
+    <section class="gtm-consultation">
+        <div class="gtm-container">
+            <div class="gtm-consultation-grid">
+                <!-- Loop through 2 consultation cards -->
+                <div class="gtm-consultation-card">
+                    <div class="gtm-consultation-image">
+                        <img src="{{card_image}}" alt="{{card_alt}}" class="gtm-consultation-img">
+                    </div>
+                    <div class="gtm-consultation-content">
+                        <h3 class="gtm-consultation-title">{{card_title}}</h3>
+                        <p class="gtm-consultation-description">{{card_description}}</p>
+                        <a href="{{card_link}}" class="gtm-consultation-link">{{link_text}}</a>
+                    </div>
+                </div>
+                <!-- End loop consultation cards -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>

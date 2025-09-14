@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}}</title>
+    <link rel="stylesheet" href="gtm-exact-styles.css">
+</head>
+<body>
+    <!-- Package Inclusions Section -->
+    <section class="gtm-inclusions">
+        <div class="gtm-container">
+            <div class="gtm-inclusions-header">
+                <h2 class="gtm-inclusions-title">{{section_title}}</h2>
+                <p class="gtm-inclusions-subtitle">{{section_description}}</p>
+            </div>
+            
+            <div class="gtm-inclusions-grid">
+                <!-- Loop through inclusion items -->
+                <div class="gtm-inclusion-item">
+                    <div class="gtm-inclusion-icon {{icon_color_class}}">
+                        {{inclusion_icon}}
+                    </div>
+                    <div class="gtm-inclusion-content">
+                        <h3 class="gtm-inclusion-title">{{inclusion_title}}</h3>
+                        <p class="gtm-inclusion-description">{{inclusion_description}}</p>
+                    </div>
+                </div>
+                <!-- End loop inclusion items -->
+            </div>
+
+            <div class="gtm-inclusions-image">
+                <img src="{{main_image}}" alt="{{main_alt}}" class="gtm-inclusions-img">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

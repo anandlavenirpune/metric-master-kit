@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}}</title>
+    <link rel="stylesheet" href="gtm-exact-styles.css">
+</head>
+<body>
+    <!-- GTM Services Two Cards Section -->
+    <section class="gtm-services">
+        <div class="gtm-container">
+            <div class="gtm-services-header">
+                <h2 class="gtm-services-title">{{section_title}}</h2>
+                <p class="gtm-services-subtitle">{{section_description}}</p>
+            </div>
+            
+            <div class="gtm-services-grid">
+                <!-- Loop through 2 services -->
+                <div class="gtm-service-column">
+                    <div class="gtm-service-header">
+                        <div class="gtm-service-icon {{icon_color_class}}">
+                            {{service_icon}}
+                        </div>
+                        <h3 class="gtm-service-title">{{service_title}}</h3>
+                    </div>
+                    <ul class="gtm-service-features">
+                        <!-- Loop through service features -->
+                        <li class="gtm-feature-item">
+                            <div class="gtm-check-icon">✓</div>
+                            <span>{{feature_text}}</span>
+                        </li>
+                        <!-- End loop features -->
+                    </ul>
+                </div>
+                <!-- End loop services -->
+            </div>
+
+            <!-- Service Images -->
+            <div class="gtm-services-images">
+                <!-- Loop through service images -->
+                <div class="gtm-service-image">
+                    <img src="{{service_image}}" alt="{{service_alt}}" class="gtm-service-img">
+                </div>
+                <!-- End loop images -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}}</title>
+    <link rel="stylesheet" href="gtm-exact-styles.css">
+</head>
+<body>
+    <!-- GTM Services Three Cards Section -->
+    <section class="gtm-additional-services">
+        <div class="gtm-container">
+            <div class="gtm-service-cards">
+                <!-- Loop through 3 service cards -->
+                <div class="gtm-service-card {{card_color_class}}">
+                    <div class="gtm-card-icon">
+                        {{card_icon}}
+                    </div>
+                    <h3 class="gtm-card-title">{{card_title}}</h3>
+                    <p class="gtm-card-description">{{card_description}}</p>
+                    <ul class="gtm-card-features">
+                        <!-- Loop through card features -->
+                        <li>{{feature_text}}</li>
+                        <!-- End loop features -->
+                    </ul>
+                </div>
+                <!-- End loop service cards -->
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -953,6 +953,259 @@ body {
     object-fit: cover;
 }
 
+/* Package Inclusions Section */
+.gtm-inclusions {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.gtm-inclusions-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.gtm-inclusions-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.gtm-inclusions-subtitle {
+    font-size: 20px;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.gtm-inclusions-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.gtm-inclusion-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.gtm-inclusion-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.gtm-inclusion-icon.gtm-icon-document {
+    background: #EFF6FF;
+    color: #3B82F6;
+}
+
+.gtm-inclusion-icon.gtm-icon-target {
+    background: #EFF6FF;
+    color: #3B82F6;
+}
+
+.gtm-inclusion-icon.gtm-icon-users {
+    background: #EFF6FF;
+    color: #3B82F6;
+}
+
+.gtm-inclusion-content {
+    flex: 1;
+}
+
+.gtm-inclusion-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.gtm-inclusion-description {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.gtm-inclusions-image {
+    text-align: center;
+}
+
+.gtm-inclusions-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Consultation Cards Section */
+.gtm-consultation {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.gtm-consultation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gtm-consultation-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.gtm-consultation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.gtm-consultation-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.gtm-consultation-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gtm-consultation-card:hover .gtm-consultation-img {
+    transform: scale(1.05);
+}
+
+.gtm-consultation-content {
+    padding: 32px;
+}
+
+.gtm-consultation-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+}
+
+.gtm-consultation-description {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.gtm-consultation-link {
+    color: #3B82F6;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.gtm-consultation-link:hover {
+    color: #1E40AF;
+}
+
+/* Statistics Cards Section */
+.gtm-statistics {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.gtm-statistics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.gtm-statistic-card {
+    background: white;
+    padding: 40px 32px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.gtm-statistic-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.gtm-statistic-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    flex-shrink: 0;
+}
+
+.gtm-statistic-icon.gtm-icon-yellow {
+    background: #FEF3C7;
+    color: #F59E0B;
+}
+
+.gtm-statistic-icon.gtm-icon-pink {
+    background: #FCE7F3;
+    color: #EC4899;
+}
+
+.gtm-statistic-icon.gtm-icon-purple {
+    background: #F3E8FF;
+    color: #8B5CF6;
+}
+
+.gtm-statistic-content {
+    text-align: left;
+}
+
+.gtm-statistic-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+}
+
+.gtm-statistic-description {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.gtm-statistics-image {
+    text-align: center;
+}
+
+.gtm-statistics-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
 /* Final Cards Section */
 .gtm-final-cards {
     padding: 100px 0;
