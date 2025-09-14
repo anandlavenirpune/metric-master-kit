@@ -2663,3 +2663,213 @@ body {
         font-size: 36px;
     }
 }
+
+/* Our 5-Step Process Section Styles */
+.gtm-process-new {
+    padding: 120px 0;
+    background: #fff;
+}
+
+.gtm-process-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.gtm-process-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+
+.gtm-process-subtitle {
+    font-size: 1.25rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.gtm-process-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.gtm-process-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gtm-process-card.gtm-process-reverse {
+    direction: rtl;
+}
+
+.gtm-process-card.gtm-process-reverse > * {
+    direction: ltr;
+}
+
+.gtm-process-image {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.gtm-process-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gtm-process-content {
+    padding: 40px;
+}
+
+.gtm-process-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: #3b82f6;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.gtm-process-step-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.gtm-process-description {
+    font-size: 1.125rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Documentation Card Styles */
+.gtm-process-icon-card {
+    background: #f8fafc;
+    border-radius: 24px;
+    padding: 60px 40px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+.gtm-doc-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: #dbeafe;
+    border-radius: 50%;
+    margin-bottom: 24px;
+    color: #3b82f6;
+}
+
+.gtm-doc-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.gtm-doc-desc {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Optimization Card Styles */
+.gtm-process-optimization-card {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    border-radius: 24px;
+    padding: 60px 40px;
+    text-align: center;
+    color: white;
+}
+
+.gtm-optimization-icon-bg {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    margin-bottom: 24px;
+    color: white;
+}
+
+.gtm-optimization-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.gtm-optimization-card-desc {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .gtm-process-card {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .gtm-process-card.gtm-process-reverse {
+        direction: ltr;
+    }
+    
+    .gtm-process-content {
+        padding: 20px;
+    }
+    
+    .gtm-process-title {
+        font-size: 2.5rem;
+    }
+    
+    .gtm-process-step-title {
+        font-size: 1.875rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .gtm-process-new {
+        padding: 80px 0;
+    }
+    
+    .gtm-process-cards {
+        gap: 60px;
+    }
+    
+    .gtm-process-title {
+        font-size: 2rem;
+    }
+    
+    .gtm-process-step-title {
+        font-size: 1.5rem;
+    }
+    
+    .gtm-process-icon-card,
+    .gtm-process-optimization-card {
+        padding: 40px 20px;
+    }
+}
