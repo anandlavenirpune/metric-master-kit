@@ -1323,3 +1323,389 @@ body {
         font-size: 20px;
     }
 }
+
+/* Detailed Process Steps Section */
+.gtm-detailed-process {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.gtm-detailed-step {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.gtm-detailed-step:last-child {
+    margin-bottom: 0;
+}
+
+.gtm-detailed-reverse {
+    direction: rtl;
+}
+
+.gtm-detailed-reverse > * {
+    direction: ltr;
+}
+
+.gtm-detailed-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gtm-detailed-number {
+    width: 60px;
+    height: 60px;
+    background: #3B82F6;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.gtm-detailed-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.gtm-detailed-description {
+    font-size: 18px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.gtm-detailed-image {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.gtm-detailed-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* Feature Card for Documentation */
+.gtm-detailed-feature-card {
+    background: #EFF6FF;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.gtm-feature-icon {
+    width: 80px;
+    height: 80px;
+    background: #3B82F6;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gtm-feature-card-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.01em;
+}
+
+.gtm-feature-card-desc {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* Optimization Card */
+.gtm-optimization-card {
+    background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.gtm-optimization-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.gtm-optimization-title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.gtm-optimization-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Ready to Fix CTA Section */
+.gtm-ready-cta {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.gtm-ready-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.gtm-ready-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.gtm-ready-subtitle {
+    font-size: 20px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.gtm-ready-btn {
+    font-size: 18px;
+    padding: 20px 40px;
+}
+
+/* Why Choose Our GTM Specialists Section */
+.gtm-specialists {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.gtm-specialists-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.gtm-specialists-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.gtm-specialists-subtitle {
+    font-size: 20px;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.gtm-specialists-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.gtm-specialists-image {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.gtm-specialists-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.gtm-specialists-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.gtm-specialist-feature {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.gtm-specialist-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.gtm-icon-certified {
+    background: #EFF6FF;
+    color: #3B82F6;
+}
+
+.gtm-icon-performance {
+    background: #ECFDF5;
+    color: #10B981;
+}
+
+.gtm-icon-privacy {
+    background: #F3E8FF;
+    color: #8B5CF6;
+}
+
+.gtm-specialist-text {
+    flex: 1;
+}
+
+.gtm-specialist-feature-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.gtm-specialist-feature-desc {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* Stats Section */
+.gtm-specialists-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+}
+
+.gtm-stat {
+    text-align: center;
+}
+
+.gtm-stat-number {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.gtm-stat-blue {
+    color: #3B82F6;
+}
+
+.gtm-stat-green {
+    color: #10B981;
+}
+
+.gtm-stat-purple {
+    color: #8B5CF6;
+}
+
+.gtm-stat-orange {
+    color: #F59E0B;
+}
+
+.gtm-stat-label {
+    font-size: 16px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Updated Responsive Design for New Sections */
+@media (max-width: 768px) {
+    .gtm-detailed-process {
+        padding: 60px 0;
+    }
+    
+    .gtm-detailed-step {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+    
+    .gtm-detailed-reverse {
+        direction: ltr;
+    }
+    
+    .gtm-detailed-title {
+        font-size: 24px;
+    }
+    
+    .gtm-detailed-description {
+        font-size: 16px;
+    }
+    
+    .gtm-ready-cta {
+        padding: 60px 0;
+    }
+    
+    .gtm-ready-title {
+        font-size: 36px;
+    }
+    
+    .gtm-ready-subtitle {
+        font-size: 18px;
+    }
+    
+    .gtm-specialists {
+        padding: 60px 0;
+    }
+    
+    .gtm-specialists-title {
+        font-size: 36px;
+    }
+    
+    .gtm-specialists-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        margin-bottom: 60px;
+    }
+    
+    .gtm-specialists-content {
+        gap: 30px;
+    }
+    
+    .gtm-specialist-feature-title {
+        font-size: 20px;
+    }
+    
+    .gtm-specialists-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    
+    .gtm-stat-number {
+        font-size: 40px;
+    }
+}
