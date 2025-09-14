@@ -414,3 +414,313 @@ body {
         font-size: 16px;
     }
 }
+
+/* GTM Services Section */
+.gtm-services {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.gtm-services-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.gtm-services-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.gtm-services-subtitle {
+    font-size: 20px;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.gtm-services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-bottom: 60px;
+}
+
+.gtm-service-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.gtm-service-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.gtm-service-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.gtm-icon-blue {
+    background: #3B82F6;
+    color: white;
+}
+
+.gtm-icon-purple {
+    background: #8B5CF6;
+    color: white;
+}
+
+.gtm-service-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+}
+
+.gtm-service-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.gtm-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.gtm-check-icon {
+    width: 20px;
+    height: 20px;
+    background: #10B981;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.gtm-services-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.gtm-service-image {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.gtm-service-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Additional Services Cards */
+.gtm-additional-services {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.gtm-service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.gtm-service-card {
+    padding: 40px 32px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.gtm-card-blue {
+    background: #EFF6FF;
+}
+
+.gtm-card-purple {
+    background: #F3E8FF;
+}
+
+.gtm-card-green {
+    background: #ECFDF5;
+}
+
+.gtm-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.gtm-card-blue .gtm-card-icon {
+    background: #3B82F6;
+    color: white;
+}
+
+.gtm-card-purple .gtm-card-icon {
+    background: #8B5CF6;
+    color: white;
+}
+
+.gtm-card-green .gtm-card-icon {
+    background: #10B981;
+    color: white;
+}
+
+.gtm-card-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+}
+
+.gtm-card-description {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.gtm-card-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.gtm-card-features li {
+    font-size: 14px;
+    color: #6b7280;
+    position: relative;
+    padding-left: 16px;
+}
+
+.gtm-card-features li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #9CA3AF;
+}
+
+/* Custom CTA Section */
+.gtm-custom-cta {
+    padding: 100px 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), 
+                url('../src/assets/custom-workspace-bg.jpg') center/cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.gtm-custom-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+}
+
+.gtm-custom-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.gtm-custom-title {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.gtm-custom-description {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Updates */
+@media (max-width: 768px) {
+    .gtm-services {
+        padding: 60px 0;
+    }
+    
+    .gtm-services-title {
+        font-size: 36px;
+    }
+    
+    .gtm-services-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .gtm-service-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .gtm-service-title {
+        font-size: 24px;
+    }
+    
+    .gtm-services-images {
+        grid-template-columns: 1fr;
+    }
+    
+    .gtm-additional-services {
+        padding: 60px 0;
+    }
+    
+    .gtm-service-cards {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .gtm-custom-cta {
+        padding: 60px 0;
+    }
+    
+    .gtm-custom-title {
+        font-size: 40px;
+    }
+    
+    .gtm-custom-description {
+        font-size: 18px;
+    }
+}
