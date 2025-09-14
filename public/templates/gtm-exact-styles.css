@@ -1838,3 +1838,241 @@ body {
         font-size: 40px;
     }
 }
+
+/* Additional Expertise Section */
+.gtm-additional-expertise {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.gtm-expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.gtm-expertise-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.gtm-expertise-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.gtm-expertise-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.gtm-icon-documentation {
+    background: #FEF3C7;
+    color: #F59E0B;
+}
+
+.gtm-icon-ecommerce {
+    background: #FEE2E2;
+    color: #EF4444;
+}
+
+.gtm-icon-whitelabel {
+    background: #EDE9FE;
+    color: #8B5CF6;
+}
+
+.gtm-expertise-text {
+    flex: 1;
+}
+
+.gtm-expertise-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.gtm-expertise-desc {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.gtm-expertise-image {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.gtm-expertise-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Industries We Support Section */
+.gtm-industries {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.gtm-industries-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.gtm-industries-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.gtm-industries-subtitle {
+    font-size: 20px;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.gtm-industries-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.gtm-industries-grid:last-child {
+    margin-bottom: 0;
+}
+
+.gtm-industry-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.gtm-industry-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.gtm-industry-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.gtm-industry-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gtm-industry-card:hover .gtm-industry-img {
+    transform: scale(1.05);
+}
+
+.gtm-industry-content {
+    padding: 32px;
+}
+
+.gtm-industry-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+}
+
+.gtm-industry-description {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.gtm-industry-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.gtm-industry-feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #374151;
+}
+
+.gtm-industry-check {
+    width: 16px;
+    height: 16px;
+    background: #10B981;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* Updated Responsive Design for New Sections */
+@media (max-width: 768px) {
+    .gtm-additional-expertise {
+        padding: 60px 0;
+    }
+    
+    .gtm-expertise-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .gtm-expertise-content {
+        gap: 30px;
+    }
+    
+    .gtm-expertise-title {
+        font-size: 20px;
+    }
+    
+    .gtm-industries {
+        padding: 60px 0;
+    }
+    
+    .gtm-industries-title {
+        font-size: 36px;
+    }
+    
+    .gtm-industries-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .gtm-industry-content {
+        padding: 24px;
+    }
+    
+    .gtm-industry-title {
+        font-size: 20px;
+    }
+}
