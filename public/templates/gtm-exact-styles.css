@@ -724,3 +724,348 @@ body {
         font-size: 18px;
     }
 }
+
+/* Packages Section */
+.gtm-packages {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.gtm-packages-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.gtm-packages-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.gtm-packages-subtitle {
+    font-size: 20px;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.gtm-packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gtm-package-card {
+    background: white;
+    border: 2px solid #f1f5f9;
+    border-radius: 20px;
+    padding: 40px 32px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.gtm-package-card:hover {
+    border-color: #e2e8f0;
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.gtm-package-popular {
+    border-color: #3B82F6;
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+}
+
+.gtm-popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #3B82F6;
+    color: white;
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.gtm-package-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.gtm-package-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+}
+
+.gtm-package-price {
+    font-size: 48px;
+    font-weight: 800;
+    color: #3B82F6;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.gtm-package-description {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.gtm-package-features {
+    list-style: none;
+    margin-bottom: 32px;
+}
+
+.gtm-package-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #374151;
+    line-height: 1.5;
+}
+
+.gtm-package-check {
+    width: 20px;
+    height: 20px;
+    background: #10B981;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.gtm-package-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gtm-package-card:last-child .gtm-package-btn {
+    background: #1f2937;
+    color: white;
+}
+
+.gtm-package-card:last-child .gtm-package-btn:hover {
+    background: #111827;
+}
+
+/* What's Included Section */
+.gtm-whats-included {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.gtm-included-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.gtm-included-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 48px;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.gtm-included-features {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.gtm-included-feature {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.gtm-included-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.gtm-icon-document {
+    background: #EFF6FF;
+    color: #3B82F6;
+}
+
+.gtm-icon-target {
+    background: #EFF6FF;
+    color: #3B82F6;
+}
+
+.gtm-icon-users {
+    background: #EFF6FF;
+    color: #3B82F6;
+}
+
+.gtm-included-feature-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.gtm-included-feature-desc {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.gtm-included-image {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.gtm-included-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Final Cards Section */
+.gtm-final-cards {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.gtm-final-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gtm-final-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.gtm-final-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.gtm-final-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.gtm-final-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gtm-final-card:hover .gtm-final-img {
+    transform: scale(1.05);
+}
+
+.gtm-final-content {
+    padding: 32px;
+}
+
+.gtm-final-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+}
+
+.gtm-final-description {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.gtm-final-link {
+    color: #3B82F6;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.gtm-final-link:hover {
+    color: #1D4ED8;
+}
+
+/* Updated Responsive Design */
+@media (max-width: 768px) {
+    .gtm-packages {
+        padding: 60px 0;
+    }
+    
+    .gtm-packages-title {
+        font-size: 36px;
+    }
+    
+    .gtm-packages-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .gtm-package-popular {
+        transform: none;
+    }
+    
+    .gtm-whats-included {
+        padding: 60px 0;
+    }
+    
+    .gtm-included-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .gtm-included-title {
+        font-size: 36px;
+    }
+    
+    .gtm-final-cards {
+        padding: 60px 0;
+    }
+    
+    .gtm-final-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
