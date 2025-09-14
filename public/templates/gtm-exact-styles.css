@@ -1423,14 +1423,14 @@ body {
     }
     
     .gtm-process-step,
-    .gtm-process-step.reverse {
+    .gtm-process-step.gtm-reverse {
         grid-template-columns: 1fr;
         gap: 40px;
         text-align: center;
     }
     
-    .gtm-process-step.reverse .gtm-step-content,
-    .gtm-process-step.reverse .gtm-step-image {
+    .gtm-process-step.gtm-reverse .gtm-step-content,
+    .gtm-process-step.gtm-reverse .gtm-step-image {
         order: initial;
     }
     
