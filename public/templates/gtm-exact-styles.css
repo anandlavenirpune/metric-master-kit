@@ -2697,24 +2697,27 @@ body {
     gap: 80px;
 }
 
+.gtm-process-card > * {
+    flex: 1;
+}
+
+.gtm-process-card.gtm-process-reverse .gtm-process-content {
+    order: 1;
+}
+
+.gtm-process-card.gtm-process-reverse .gtm-process-image,
+.gtm-process-card.gtm-process-reverse .gtm-process-icon-card,
+.gtm-process-card.gtm-process-reverse .gtm-process-optimization-card {
+    order: 2;
+}
+
 .gtm-process-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 80px;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
 }
-
-.gtm-process-card.gtm-process-reverse {
-    direction: rtl;
-}
-
-.gtm-process-card.gtm-process-reverse > * {
-    direction: ltr;
-}
-
-.gtm-process-image {
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
@@ -2829,13 +2832,16 @@ body {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .gtm-process-card {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 40px;
         text-align: center;
     }
     
-    .gtm-process-card.gtm-process-reverse {
-        direction: ltr;
+    .gtm-process-card.gtm-process-reverse .gtm-process-content,
+    .gtm-process-card.gtm-process-reverse .gtm-process-image,
+    .gtm-process-card.gtm-process-reverse .gtm-process-icon-card,
+    .gtm-process-card.gtm-process-reverse .gtm-process-optimization-card {
+        order: initial;
     }
     
     .gtm-process-content {
