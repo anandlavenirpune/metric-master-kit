@@ -1220,6 +1220,7 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: center;
+    margin-bottom: 60px;
 }
 
 .gtm-process-image {
@@ -1278,6 +1279,117 @@ body {
     line-height: 1.6;
 }
 
+/* Alternative Process Steps */
+.gtm-process-step-alt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.gtm-process-reverse {
+    direction: rtl;
+}
+
+.gtm-process-reverse > * {
+    direction: ltr;
+}
+
+.gtm-process-step-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.gtm-process-step-image {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.gtm-process-step-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Documentation Card */
+.gtm-documentation-card {
+    background: #EFF6FF;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 300px;
+    justify-content: center;
+}
+
+.gtm-doc-icon {
+    width: 80px;
+    height: 80px;
+    background: #3B82F6;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gtm-doc-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.01em;
+}
+
+.gtm-doc-desc {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* Optimization Card for Step */
+.gtm-optimization-card-step {
+    background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 300px;
+    justify-content: center;
+}
+
+.gtm-optimization-icon-step {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.gtm-optimization-title-step {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.gtm-optimization-desc-step {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
 /* Updated Responsive Design for New Sections */
 @media (max-width: 768px) {
     .gtm-success-stories {
@@ -1315,6 +1427,16 @@ body {
         gap: 50px;
     }
     
+    .gtm-process-step-alt {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .gtm-process-reverse {
+        direction: ltr;
+    }
+    
     .gtm-process-content {
         gap: 24px;
     }
@@ -1322,6 +1444,13 @@ body {
     .gtm-step-title {
         font-size: 20px;
     }
+    
+    .gtm-documentation-card,
+    .gtm-optimization-card-step {
+        height: auto;
+        min-height: 250px;
+    }
+}
 }
 
 /* Detailed Process Steps Section */
