@@ -2697,26 +2697,22 @@ body {
     gap: 80px;
 }
 
-.gtm-process-card > * {
-    flex: 1;
-}
-
-.gtm-process-card.gtm-process-reverse .gtm-process-content {
-    order: 1;
-}
-
-.gtm-process-card.gtm-process-reverse .gtm-process-image,
-.gtm-process-card.gtm-process-reverse .gtm-process-icon-card,
-.gtm-process-card.gtm-process-reverse .gtm-process-optimization-card {
-    order: 2;
-}
-
 .gtm-process-card {
     display: flex;
     gap: 80px;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.gtm-process-card > * {
+    flex: 1;
+}
+
+/* Alternate layout: even cards (2nd, 4th) get reversed */
+.gtm-process-card:nth-child(2),
+.gtm-process-card:nth-child(4) {
+    flex-direction: row-reverse;
 }
     border-radius: 24px;
     overflow: hidden;
