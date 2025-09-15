@@ -307,12 +307,93 @@
             height: 1.25rem;
         }
 
+        /* Tools Section Styles */
+        .tools-section {
+            padding: 5rem 0;
+            background: hsl(var(--card));
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .tool-category-card {
+            background: hsl(var(--background));
+            border: 1px solid hsl(var(--border));
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+        }
+
+        .tool-category-card:hover {
+            box-shadow: var(--shadow-card);
+            transform: translateY(-4px);
+        }
+
+        .tool-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .category-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tool-content {
+            padding: 1.5rem;
+        }
+
+        .category-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: hsl(var(--primary));
+        }
+
+        .tool-list {
+            list-style: none;
+        }
+
+        .tool-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .check-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            background: hsl(var(--accent));
+            color: hsl(var(--accent-foreground));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .tool-name {
+            color: hsl(var(--foreground));
+            font-weight: 500;
+        }
+
         @media (max-width: 768px) {
             .nav {
                 display: none;
             }
 
-            .services-grid {
+            .services-grid, .tools-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -324,7 +405,7 @@
                 padding: 3rem 0 5rem;
             }
 
-            .services {
+            .services, .tools-section {
                 padding: 3rem 0;
             }
         }
@@ -839,6 +920,214 @@
                             </div>
                         </li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools We Specialize In Section -->
+    <section class="tools-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tools We Specialize In</h2>
+                <p>Expert-level proficiency across the entire marketing technology stack</p>
+            </div>
+            
+            <div class="tools-grid">
+                <!-- Analytics & Tracking -->
+                <div class="tool-category-card">
+                    <div class="tool-image">
+                        <img src="/src/assets/analytics-tracking.jpg" alt="Analytics & Tracking Dashboard" class="category-img">
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="category-title">Analytics & Tracking</h3>
+                        <ul class="tool-list">
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Google Analytics 4 (GA4)</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Google Tag Manager (GTM)</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Server-Side GTM (sGTM)</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Google Tag (gtag.js)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Visualization & Reporting -->
+                <div class="tool-category-card">
+                    <div class="tool-image">
+                        <img src="/src/assets/visualization-reporting.jpg" alt="Visualization & Reporting Tools" class="category-img">
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="category-title">Visualization & Reporting</h3>
+                        <ul class="tool-list">
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Looker Studio</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">BigQuery</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Power BI</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Tableau</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Google Sheets connectors</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Advertising & Marketing Platforms -->
+                <div class="tool-category-card">
+                    <div class="tool-image">
+                        <img src="/src/assets/advertising-platforms.jpg" alt="Advertising & Marketing Platforms" class="category-img">
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="category-title">Advertising & Marketing Platforms</h3>
+                        <ul class="tool-list">
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Google Ads</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Meta Ads (Facebook/Instagram)</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">TikTok Ads</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">LinkedIn Ads</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Microsoft Ads</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CRM & Automation -->
+                <div class="tool-category-card">
+                    <div class="tool-image">
+                        <img src="/src/assets/crm-automation.jpg" alt="CRM & Automation Tools" class="category-img">
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="category-title">CRM & Automation</h3>
+                        <ul class="tool-list">
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">HubSpot</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Salesforce</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Zapier / Make / n8n</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Segment / Rudderstack</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Slack integrations</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Consent & Privacy -->
+                <div class="tool-category-card">
+                    <div class="tool-image">
+                        <img src="/src/assets/analytics-tracking.jpg" alt="Consent & Privacy Tools" class="category-img">
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="category-title">Consent & Privacy</h3>
+                        <ul class="tool-list">
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Google Consent Mode v2</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Cookiebot, OneTrust, Didomi, Quantcast</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ecommerce Platforms -->
+                <div class="tool-category-card">
+                    <div class="tool-image">
+                        <img src="/src/assets/visualization-reporting.jpg" alt="Ecommerce Platforms" class="category-img">
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="category-title">Ecommerce Platforms</h3>
+                        <ul class="tool-list">
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Shopify</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">WooCommerce</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Magento</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">BigCommerce</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Cloud & Infrastructure -->
+                <div class="tool-category-card">
+                    <div class="tool-image">
+                        <img src="/src/assets/advertising-platforms.jpg" alt="Cloud & Infrastructure" class="category-img">
+                    </div>
+                    <div class="tool-content">
+                        <h3 class="category-title">Cloud & Infrastructure</h3>
+                        <ul class="tool-list">
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Google Cloud Platform (GCP)</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">AWS</span>
+                            </li>
+                            <li class="tool-item">
+                                <span class="check-icon">✓</span>
+                                <span class="tool-name">Cloudflare Zaraz</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
