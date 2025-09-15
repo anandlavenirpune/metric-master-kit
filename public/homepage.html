@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Analytics - Your Data, Clean, Connected, and Actionable</title>
+    <meta name="description" content="We help businesses worldwide capture accurate data, automate reports, and uncover insights across GA4, GTM, Looker Studio, BigQuery, and more.">
+    <style>
+        :root {
+            /* Brand Colors - B2B Marketing Agency Theme */
+            --primary: 218 64% 33%;        /* Deep Navy Blue #1F3B8C */
+            --primary-foreground: 0 0% 100%;
+            --primary-light: 218 64% 45%;
+            --primary-dark: 218 64% 25%;
+
+            --accent: 47 94% 52%;          /* Warm Yellow #F9C80E */
+            --accent-foreground: 0 0% 18%;
+            --accent-light: 47 94% 65%;
+            --accent-dark: 47 94% 40%;
+
+            --background: 0 0% 96%;        /* Soft Grey #F5F5F5 */
+            --foreground: 0 0% 18%;        /* Charcoal #2E2E2E */
+
+            --card: 0 0% 100%;
+            --card-foreground: 0 0% 18%;
+            --muted: 0 0% 93%;
+            --muted-foreground: 0 0% 40%;
+            --border: 0 0% 90%;
+
+            /* Gradients */
+            --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+            --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-light)));
+            --shadow-soft: 0 4px 20px -2px hsl(var(--primary) / 0.1);
+            --shadow-card: 0 8px 30px -8px hsl(var(--primary) / 0.15);
+            --shadow-button: 0 4px 15px -3px hsl(var(--accent) / 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header Styles */
+        .header {
+            background: hsl(var(--card));
+            border-bottom: 1px solid hsl(var(--border));
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 4rem;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: hsl(var(--primary));
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: hsl(var(--foreground));
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: hsl(var(--primary));
+        }
+
+        .nav a.active {
+            color: hsl(var(--primary));
+            border-bottom: 2px solid hsl(var(--primary));
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-dark)) 100%);
+            color: hsl(var(--primary-foreground));
+            padding: 5rem 0 8rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('/src/assets/hero-analytics.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-accent {
+            background: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-light)));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .btn-hero {
+            background: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-light)));
+            color: hsl(var(--accent-foreground));
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 0.75rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: var(--shadow-button);
+            transition: all 0.3s ease;
+        }
+
+        .btn-hero:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px -5px hsl(var(--accent) / 0.4);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 0;
+            background: hsl(var(--muted) / 0.3);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: hsl(var(--foreground));
+        }
+
+        .section-header p {
+            font-size: 1.25rem;
+            color: hsl(var(--muted-foreground));
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-column {
+            background: hsl(var(--card));
+            border: 1px solid hsl(var(--border));
+            border-radius: 0.75rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+        }
+
+        .service-column:hover {
+            box-shadow: var(--shadow-card);
+            transform: translateY(-4px);
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: hsl(var(--foreground));
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
+
+        .service-icon.blue {
+            background-color: #e0e7ff;
+            color: #3b82f6;
+        }
+
+        .service-icon.purple {
+            background-color: #f3e8ff;
+            color: #a855f7;
+        }
+
+        .service-icon.green {
+            background-color: #ecfdf5;
+            color: #10b981;
+        }
+
+        .service-icon.orange {
+            background-color: #fed7aa;
+            color: #f97316;
+        }
+
+        .service-icon.red {
+            background-color: #fecaca;
+            color: #ef4444;
+        }
+
+        .service-icon.teal {
+            background-color: #ccfbf1;
+            color: #14b8a6;
+        }
+
+        .service-icon.indigo {
+            background-color: #e0e7ff;
+            color: #6366f1;
+        }
+
+        .service-icon.pink {
+            background-color: #fdf2f8;
+            color: #ec4899;
+        }
+
+        .service-icon.yellow {
+            background-color: #fef3c7;
+            color: #f59e0b;
+        }
+
+        .service-content h4 {
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+            color: hsl(var(--foreground));
+        }
+
+        .service-content p {
+            font-size: 0.875rem;
+            color: hsl(var(--muted-foreground));
+            line-height: 1.5;
+        }
+
+        .icon {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .hero {
+                padding: 3rem 0 5rem;
+            }
+
+            .services {
+                padding: 3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Marketing Analytics</div>
+                <nav class="nav">
+                    <a href="/" class="active">Home</a>
+                    <a href="/gtm-services">GTM Services</a>
+                </nav>
+                <div class="mobile-menu" style="display: none;">
+                    <button>☰</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    Your Marketing Data.
+                    <br>
+                    <span class="hero-accent">Clean, Connected, and Actionable.</span>
+                </h1>
+                <p>
+                    We help businesses worldwide capture accurate data, automate reports, and 
+                    uncover insights across GA4, GTM, Looker Studio, BigQuery, and more. From 
+                    setup to strategy, we make your data work.
+                </p>
+                <a href="#contact" class="btn-hero">
+                    👉 Book Your Free GA4 & GTM Audit
+                    <span class="icon">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>What We Do</h2>
+                <p>Comprehensive marketing analytics services to transform your data into actionable insights</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Analytics Setup & Audits -->
+                <div class="service-column">
+                    <h3 class="service-title">Analytics Setup & Audits</h3>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="service-icon blue">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Google Analytics 4 (GA4) migration & audits</h4>
+                                <p>Complete migration from Universal Analytics to GA4 with data validation and custom event setup</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon blue">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Event & conversion tracking setup</h4>
+                                <p>Configure custom events, goals, and conversion tracking for accurate performance measurement</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon blue">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Ecommerce tracking (Shopify, WooCommerce, Magento)</h4>
+                                <p>Set up comprehensive ecommerce tracking with purchase events and revenue attribution</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon blue">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Cross-domain & multi-site tracking</h4>
+                                <p>Implement unified tracking across multiple domains and subdomains</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tag Management -->
+                <div class="service-column">
+                    <h3 class="service-title">Tag Management</h3>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="service-icon purple">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Google Tag Manager (GTM) setup & debugging</h4>
+                                <p>Professional GTM container setup with proper tag firing and debugging protocols</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon purple">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Server-Side GTM (sGTM) implementation on GCP/AWS</h4>
+                                <p>Deploy server-side tracking for improved data quality and privacy compliance</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon purple">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Meta Conversions API & Google Ads Enhanced Conversions</h4>
+                                <p>Implement first-party data tracking for better ad performance and attribution</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon purple">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Cookie lifespan & cookieless tracking solutions</h4>
+                                <p>Future-proof tracking strategies that work with evolving privacy regulations</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Reporting & Dashboarding -->
+                <div class="service-column">
+                    <h3 class="service-title">Reporting & Dashboarding</h3>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="service-icon green">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Looker Studio dashboards (quota-proof, automated)</h4>
+                                <p>Custom dashboards with automated data refresh and quota optimization</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon green">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Power BI & Tableau reporting</h4>
+                                <p>Enterprise-grade reporting solutions with advanced visualizations</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon green">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>BigQuery pipelines & advanced SQL models</h4>
+                                <p>Scalable data pipelines with custom SQL transformations and modeling</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon green">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Automated email/slack/pdf reports</h4>
+                                <p>Scheduled report delivery with customizable formats and stakeholder distribution</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Attribution & ROI Analytics -->
+                <div class="service-column">
+                    <h3 class="service-title">Attribution & ROI Analytics</h3>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="service-icon orange">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Multi-touch attribution modeling</h4>
+                                <p>Advanced attribution models to understand the full customer journey</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon orange">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Cost vs revenue tracking</h4>
+                                <p>Comprehensive ROI analysis across all marketing channels and campaigns</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon orange">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Customer Lifetime Value (LTV) dashboards</h4>
+                                <p>Track and predict customer value over time with cohort analysis</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon orange">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Offline conversions integration</h4>
+                                <p>Connect offline sales data with online marketing attribution</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Privacy & Compliance -->
+                <div class="service-column">
+                    <h3 class="service-title">Privacy & Compliance</h3>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="service-icon red">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Consent Mode v2 setup</h4>
+                                <p>Implement Google's latest consent management for privacy-compliant tracking</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon red">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>CMP integrations (Cookiebot, OneTrust, Didomi, Quantcast)</h4>
+                                <p>Seamless integration with major consent management platforms</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon red">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>GDPR, PIPEDA, APP, PDPL-compliant data tracking</h4>
+                                <p>Ensure compliance with global privacy regulations and data protection laws</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon red">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>IP anonymization & privacy-first setups</h4>
+                                <p>Implement privacy-by-design tracking configurations</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Data Quality & Validation -->
+                <div class="service-column">
+                    <h3 class="service-title">Data Quality & Validation</h3>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="service-icon teal">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Identify and fix data mismatches (GA4 vs Ads vs CRM)</h4>
+                                <p>Audit and reconcile data discrepancies across platforms</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon teal">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Deduplicate and clean ecommerce & lead data</h4>
+                                <p>Clean and standardize data for accurate reporting and analysis</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon teal">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Bot traffic filtering</h4>
+                                <p>Implement filters to exclude bot traffic and ensure data accuracy</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon teal">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Channel grouping setup</h4>
+                                <p>Organize traffic sources into meaningful channel groups for better analysis</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Predictive Analytics & Forecasting -->
+                <div class="service-column">
+                    <h3 class="service-title">Predictive Analytics & Forecasting</h3>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="service-icon indigo">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Anomaly detection in GA4 & BigQuery</h4>
+                                <p>Automated alerts for unusual patterns and data anomalies</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon indigo">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Sales and revenue forecasting</h4>
+                                <p>Predictive models for revenue planning and business forecasting</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon indigo">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Customer churn prediction</h4>
+                                <p>Machine learning models to identify at-risk customers</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon indigo">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Marketing performance trend analysis</h4>
+                                <p>Advanced analytics to predict marketing performance trends</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- CRM & Marketing Automation -->
+                <div class="service-column">
+                    <h3 class="service-title">CRM & Marketing Automation</h3>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="service-icon pink">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>HubSpot & Salesforce GA4 integrations</h4>
+                                <p>Connect analytics data with CRM systems for unified customer insights</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon pink">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Zapier / Make / n8n workflows</h4>
+                                <p>Automate data flows between marketing tools and analytics platforms</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon pink">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Segment & Rudderstack event pipelines</h4>
+                                <p>Implement customer data platforms for unified event tracking</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon pink">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Slack & Sheets reporting automations</h4>
+                                <p>Automated reporting workflows for team collaboration and data sharing</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Training & Workshops -->
+                <div class="service-column">
+                    <h3 class="service-title">Training & Workshops</h3>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="service-icon yellow">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>GA4 & GTM hands-on training for teams</h4>
+                                <p>Comprehensive training programs for marketing teams and analysts</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon yellow">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Looker Studio dashboard workshops</h4>
+                                <p>Learn to build and customize professional analytics dashboards</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon yellow">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Privacy & consent compliance training</h4>
+                                <p>Stay updated on privacy regulations and compliant tracking practices</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon yellow">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <div class="service-content">
+                                <h4>Custom strategy sessions for marketing teams</h4>
+                                <p>Tailored consulting sessions for marketing strategy and analytics optimization</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
