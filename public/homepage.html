@@ -388,12 +388,155 @@
             font-weight: 500;
         }
 
+        /* Industries Section Styles */
+        .industries-section {
+            padding: 5rem 0;
+            background: hsl(var(--muted) / 0.3);
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .industry-card {
+            background: hsl(var(--card));
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .industry-card:hover {
+            box-shadow: var(--shadow-card);
+            transform: translateY(-4px);
+        }
+
+        .industry-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .industry-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .industry-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, hsl(var(--primary) / 0.8), hsl(var(--primary-dark) / 0.9));
+        }
+
+        .industry-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            color: hsl(var(--primary-foreground));
+            z-index: 2;
+        }
+
+        .industry-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .industry-description {
+            font-size: 1rem;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        /* Why Choose Us Section Styles */
+        .why-choose-section {
+            padding: 5rem 0;
+            background: hsl(var(--card));
+        }
+
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .why-choose-card {
+            background: hsl(var(--background));
+            border: 1px solid hsl(var(--border));
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+        }
+
+        .why-choose-card:hover {
+            box-shadow: var(--shadow-card);
+            transform: translateY(-4px);
+        }
+
+        .why-choose-image {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .why-choose-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .why-choose-content {
+            padding: 1.5rem;
+        }
+
+        .why-choose-icon {
+            width: 3rem;
+            height: 3rem;
+            background: hsl(var(--accent) / 0.1);
+            color: hsl(var(--accent-dark));
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .why-choose-icon .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        .why-choose-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: hsl(var(--foreground));
+        }
+
+        .why-choose-description {
+            color: hsl(var(--muted-foreground));
+            line-height: 1.6;
+        }
+
         @media (max-width: 768px) {
             .nav {
                 display: none;
             }
 
-            .services-grid, .tools-grid {
+            .services-grid, .tools-grid, .industries-grid, .why-choose-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -405,7 +548,7 @@
                 padding: 3rem 0 5rem;
             }
 
-            .services, .tools-section {
+            .services, .tools-section, .industries-section, .why-choose-section {
                 padding: 3rem 0;
             }
         }
@@ -1127,6 +1270,131 @@
                                 <span class="tool-name">Cloudflare Zaraz</span>
                             </li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve Section -->
+    <section class="industries-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Industries We Serve</h2>
+                <p>Tailored analytics solutions for every business vertical</p>
+            </div>
+            
+            <div class="industries-grid">
+                <!-- E-commerce & Retail -->
+                <div class="industry-card">
+                    <div class="industry-image">
+                        <img src="/src/assets/industries-ecommerce.jpg" alt="E-commerce Analytics" class="industry-img">
+                        <div class="industry-overlay"></div>
+                    </div>
+                    <div class="industry-content">
+                        <h3 class="industry-title">E-commerce & Retail</h3>
+                        <p class="industry-description">Advanced purchase tracking, refund analytics, and customer journey optimization</p>
+                    </div>
+                </div>
+
+                <!-- B2B & SaaS -->
+                <div class="industry-card">
+                    <div class="industry-image">
+                        <img src="/src/assets/case-study-saas.jpg" alt="B2B & SaaS Analytics" class="industry-img">
+                        <div class="industry-overlay"></div>
+                    </div>
+                    <div class="industry-content">
+                        <h3 class="industry-title">B2B & SaaS</h3>
+                        <p class="industry-description">Lead tracking, CRM integration, and pipeline analytics for subscription businesses</p>
+                    </div>
+                </div>
+
+                <!-- Agencies -->
+                <div class="industry-card">
+                    <div class="industry-image">
+                        <img src="/src/assets/industries-agencies-finance.jpg" alt="Agency Analytics Services" class="industry-img">
+                        <div class="industry-overlay"></div>
+                    </div>
+                    <div class="industry-content">
+                        <h3 class="industry-title">Agencies</h3>
+                        <p class="industry-description">White-label analytics services and scalable reporting solutions for client management</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Us</h2>
+                <p>Global expertise with local precision</p>
+            </div>
+            
+            <div class="why-choose-grid">
+                <!-- Global Focus -->
+                <div class="why-choose-card">
+                    <div class="why-choose-image">
+                        <img src="/src/assets/team-analytics.jpg" alt="Global Analytics Team" class="why-choose-img">
+                    </div>
+                    <div class="why-choose-content">
+                        <div class="why-choose-icon">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="why-choose-title">Global Focus</h3>
+                        <p class="why-choose-description">Serving clients across Canada, Australia, UAE, UK & US with localized expertise and 24/7 support</p>
+                    </div>
+                </div>
+
+                <!-- Full-Stack Expertise -->
+                <div class="why-choose-card">
+                    <div class="why-choose-image">
+                        <img src="/src/assets/analytics-tracking.jpg" alt="Full-Stack Analytics Expertise" class="why-choose-img">
+                    </div>
+                    <div class="why-choose-content">
+                        <div class="why-choose-icon">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="why-choose-title">Full-Stack Expertise</h3>
+                        <p class="why-choose-description">Complete mastery of GA4, GTM, Looker Studio, BigQuery, Ads, CRM and CMPs for end-to-end solutions</p>
+                    </div>
+                </div>
+
+                <!-- Compliance-Ready -->
+                <div class="why-choose-card">
+                    <div class="why-choose-image">
+                        <img src="/src/assets/visualization-reporting.jpg" alt="Compliance Ready Analytics" class="why-choose-img">
+                    </div>
+                    <div class="why-choose-content">
+                        <div class="why-choose-icon">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <h3 class="why-choose-title">Compliance-Ready</h3>
+                        <p class="why-choose-description">GDPR, PIPEDA, APP, PDPL compliant tracking with privacy-first approaches and consent management</p>
+                    </div>
+                </div>
+
+                <!-- Automation-First -->
+                <div class="why-choose-card">
+                    <div class="why-choose-image">
+                        <img src="/src/assets/advertising-platforms.jpg" alt="Automation First Analytics" class="why-choose-img">
+                    </div>
+                    <div class="why-choose-content">
+                        <div class="why-choose-icon">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="why-choose-title">Automation-First</h3>
+                        <p class="why-choose-description">Real-time dashboards and automated workflows that save time and deliver insights 24/7</p>
                     </div>
                 </div>
             </div>
