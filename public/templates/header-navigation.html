@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Header</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        .header {
+            background: hsl(0 0% 100%);
+            border-bottom: 1px solid hsl(220 13% 91%);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px 0 hsl(0 0% 0% / 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 4rem;
+        }
+
+        /* Logo/Brand */
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: hsl(222.2 84% 4.9%);
+            text-decoration: none;
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            color: hsl(222.2 84% 4.9%);
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 0.375rem;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover {
+            background: hsl(210 40% 98%);
+            color: hsl(222.2 47.4% 11.2%);
+        }
+
+        /* Dropdown Arrow */
+        .dropdown-arrow {
+            width: 1rem;
+            height: 1rem;
+            transition: transform 0.2s ease;
+        }
+
+        .nav-item:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        /* Mega Menu */
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: hsl(0 0% 100%);
+            border: 1px solid hsl(220 13% 91%);
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -2px hsl(0 0% 0% / 0.05);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-50%) translateY(-10px);
+            transition: all 0.3s ease;
+            min-width: 400px;
+            z-index: 1001;
+        }
+
+        .nav-item:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .mega-menu-content {
+            padding: 1.5rem;
+        }
+
+        .mega-menu-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .mega-menu-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .mega-menu-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: hsl(222.2 47.4% 11.2%);
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .mega-menu-items {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .mega-menu-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            color: hsl(222.2 84% 4.9%);
+            transition: all 0.2s ease;
+        }
+
+        .mega-menu-item:hover {
+            background: hsl(210 40% 98%);
+        }
+
+        .mega-menu-icon {
+            width: 2rem;
+            height: 2rem;
+            background: hsl(210 40% 98%);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: hsl(221.2 83.2% 53.3%);
+        }
+
+        .mega-menu-item-content {
+            flex: 1;
+        }
+
+        .mega-menu-item-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: hsl(222.2 84% 4.9%);
+        }
+
+        .mega-menu-item-description {
+            font-size: 0.875rem;
+            color: hsl(215.4 16.3% 46.9%);
+            line-height: 1.4;
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            color: hsl(222.2 84% 4.9%);
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .mega-menu {
+                position: fixed;
+                top: 4rem;
+                left: 0;
+                right: 0;
+                transform: none;
+                min-width: auto;
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
+            }
+
+            .nav-item:hover .mega-menu {
+                transform: none;
+            }
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            .header {
+                background: hsl(222.2 84% 4.9%);
+                border-bottom-color: hsl(217.2 32.6% 17.5%);
+            }
+
+            .brand,
+            .nav-link {
+                color: hsl(210 40% 98%);
+            }
+
+            .nav-link:hover {
+                background: hsl(217.2 32.6% 17.5%);
+                color: hsl(210 40% 98%);
+            }
+
+            .mega-menu {
+                background: hsl(222.2 84% 4.9%);
+                border-color: hsl(217.2 32.6% 17.5%);
+            }
+
+            .mega-menu-title {
+                color: hsl(210 40% 98%);
+            }
+
+            .mega-menu-item {
+                color: hsl(210 40% 98%);
+            }
+
+            .mega-menu-item:hover {
+                background: hsl(217.2 32.6% 17.5%);
+            }
+
+            .mega-menu-icon {
+                background: hsl(217.2 32.6% 17.5%);
+                color: hsl(217.2 91.2% 59.8%);
+            }
+
+            .mega-menu-item-title {
+                color: hsl(210 40% 98%);
+            }
+
+            .mega-menu-item-description {
+                color: hsl(215 20.2% 65.1%);
+            }
+
+            .mobile-menu-btn {
+                color: hsl(210 40% 98%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <!-- Brand/Logo -->
+            <a href="/" class="brand">Analytics Pro</a>
+
+            <!-- Navigation Menu -->
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">
+                            Services
+                            <svg class="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        
+                        <!-- Mega Menu -->
+                        <div class="mega-menu">
+                            <div class="mega-menu-content">
+                                <div class="mega-menu-section">
+                                    <h3 class="mega-menu-title">Analytics Services</h3>
+                                    <div class="mega-menu-items">
+                                        <a href="/gtm-services" class="mega-menu-item">
+                                            <div class="mega-menu-icon">
+                                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM14 9a1 1 0 100 2h3a1 1 0 100-2h-3zM3 16a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <div class="mega-menu-item-content">
+                                                <div class="mega-menu-item-title">GTM Services</div>
+                                                <div class="mega-menu-item-description">
+                                                    Complete Google Tag Manager setup, analytics implementation, and tracking solutions
+                                                </div>
+                                            </div>
+                                        </a>
+                                        
+                                        <a href="#analytics-audit" class="mega-menu-item">
+                                            <div class="mega-menu-icon">
+                                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+                                                </svg>
+                                            </div>
+                                            <div class="mega-menu-item-content">
+                                                <div class="mega-menu-item-title">Analytics Audit</div>
+                                                <div class="mega-menu-item-description">
+                                                    Comprehensive review of your current analytics setup and optimization recommendations
+                                                </div>
+                                            </div>
+                                        </a>
+                                        
+                                        <a href="#data-visualization" class="mega-menu-item">
+                                            <div class="mega-menu-icon">
+                                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <div class="mega-menu-item-content">
+                                                <div class="mega-menu-item-title">Data Visualization</div>
+                                                <div class="mega-menu-item-description">
+                                                    Custom dashboards and reporting solutions for better data insights
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="mega-menu-section">
+                                    <h3 class="mega-menu-title">Consulting</h3>
+                                    <div class="mega-menu-items">
+                                        <a href="#strategy-consulting" class="mega-menu-item">
+                                            <div class="mega-menu-icon">
+                                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <div class="mega-menu-item-content">
+                                                <div class="mega-menu-item-title">Strategy Consulting</div>
+                                                <div class="mega-menu-item-description">
+                                                    Data-driven marketing strategy and analytics implementation planning
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <script>
+        // Simple mobile menu toggle (you can enhance this)
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Close mega menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.nav-item')) {
+                document.querySelectorAll('.mega-menu').forEach(menu => {
+                    menu.style.opacity = '0';
+                    menu.style.visibility = 'hidden';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
